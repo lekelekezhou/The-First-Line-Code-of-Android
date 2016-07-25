@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_item_lv_main_id"
+        android:layout_width="@dimen/activity_btn_width"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/layout_main_id"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/tv_item_lv_main_province"
+        android:layout_width="@dimen/activity_btn_width"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/layout_main_province"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/tv_item_lv_main_city"
+        android:layout_width="@dimen/activity_btn_width"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/layout_main_city"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/tv_item_lv_main_district"
+        android:layout_width="@dimen/activity_btn_width"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/layout_main_district"
+        android:textAllCaps="false" />
+
+</LinearLayout>
