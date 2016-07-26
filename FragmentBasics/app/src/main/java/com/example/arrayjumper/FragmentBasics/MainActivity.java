@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity
         ArticleFragment articleFrag = (ArticleFragment)
                 getSupportFragmentManager().findFragmentById(R.id.article_fragment);
 
-        if (articleFrag != null) {
 
+        if (articleFrag != null) {
             // If article frag is available, we're in two-pane layout...
             // Call a method in the ArticleFragment to update its content
             articleFrag.updateArticleView(position);

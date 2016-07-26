@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SQLiteOpenHelper Demo</string>
+    <string name="app_name">A SQLiteOpenHelper Demo</string>
     <string name="layout_main_id">Data Id</string>
     <string name="layout_main_province">Province</string>
     <string name="layout_main_city">City</string>

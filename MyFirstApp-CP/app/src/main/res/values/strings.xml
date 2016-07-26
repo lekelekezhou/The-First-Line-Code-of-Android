@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">A Intent Demo</string>
+    <string name="app_name">An Interactive Intent Demo</string>
     <string name="action_settings">Settings</string>
     <string name="edit_string">Enter a Message</string>
     <string name="button_send">Send</string>
