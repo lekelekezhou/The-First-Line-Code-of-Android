@@ -18,7 +18,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "MainActivity";
@@ -96,26 +95,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_main_insert:
                 btn_main_insert.setEnabled(false);
                 insert();
+                btn_main_insert.setEnabled(true);
                 break;
 
             case R.id.btn_main_delete:
                 btn_main_delete.setEnabled(false);
                 delete();
+                btn_main_delete.setEnabled(true);
                 break;
 
             case R.id.btn_main_update:
                 btn_main_update.setEnabled(false);
                 update();
+                btn_main_update.setEnabled(true);
                 break;
 
             case R.id.btn_main_query:
                 btn_main_query.setEnabled(false);
                 query();
+                btn_main_query.setEnabled(true);
                 break;
 
             case R.id.btn_main_reset:
                 btn_main_reset.setEnabled(false);
                 reset();
+                btn_main_reset.setEnabled(true);
                 break;
 
             default:
@@ -143,9 +147,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             try {
                 mCityDao.insertData(mCityBean);
-                String msg = "Insert into Table\n" +
-                        "insert into " + CityDBHelper.TableCity.TABLE_NAME +
-                        "(id, province, city, district) values (" +
+                String msg = "Insert into Table:\n" +
+                        "INSERT INTO " + CityDBHelper.TableCity.TABLE_NAME +
+                        "(id, province, city, district) VALUES (" +
                         "\"" + mCityBean.getId() + "\", " +
                         "\"" + mCityBean.getProvince() + "\", " +
                         "\"" + mCityBean.getCity() + "\", " +
@@ -154,11 +158,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 refreshList();
 
                 mHandler.sendMessageDelayed(message, 3000);
-                Toast.makeText(this, "Insert Operation Successful", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Insert Done", Toast.LENGTH_SHORT).show();
             } catch (Exception e) {
-                Toast.makeText(this, "Insert Operation Error!", Toast.LENGTH_SHORT).show();
-            } finally {
-                btn_main_insert.setEnabled(true);
+                Toast.makeText(this, "Insert Error!", Toast.LENGTH_SHORT).show();
             }
         } else {
             Toast.makeText(this, "Please Verify Your Data Format Before Insert", Toast.LENGTH_SHORT).show();
@@ -178,22 +180,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (!TextUtils.isEmpty(id) && TextUtils.isEmpty(province) && TextUtils.isEmpty(city) &&
                 TextUtils.isEmpty(district)) {
             try {
-                mCityDao.deleteData(Integer.parseInt(id));
+                mCityDao.deleteData((id));
                 String msg = "Delete A Record\n" +
-                        "delete form" + CityDBHelper.TableCity.TABLE_NAME + "where id = " + id;
+                        "DELETE FROM " + CityDBHelper.TableCity.TABLE_NAME + "WHERE ID =  " + id;
                 tv_main_msg.setText(msg);
 
                 refreshList();
 
                 mHandler.sendMessageDelayed(message, 3000);
-                Toast.makeText(this, "Delete Operation Successful!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Delete Done!", Toast.LENGTH_SHORT).show();
 
             } catch (Exception e) {
                 mHandler.sendMessage(message);
-                Toast.makeText(this, "Delete Operation Error", Toast.LENGTH_SHORT).show();
-
-            } finally {
-                btn_main_delete.setEnabled(true);
+                Toast.makeText(this, "Delete Error", Toast.LENGTH_SHORT).show();
             }
         } else {
             Toast.makeText(this, "Please Verify Your Data Format Before Delete", Toast.LENGTH_SHORT).show();
@@ -223,8 +222,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 try {
                     mCityDao.updateData(mCityBean);
-                    String msg = "修改一条数据\n" +
-                            "update " + CityDBHelper.TableCity.TABLE_NAME + " set" +
+                    String msg = "Revise Data:\n" +
+                            "UPDATE " + CityDBHelper.TableCity.TABLE_NAME + " SET" +
                             " province = " + mCityBean.getProvince() +
                             ", city = " + mCityBean.getCity() +
                             ", district = " + mCityBean.getDistrict() +
@@ -234,14 +233,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     refreshList();
 
                     mHandler.sendMessageDelayed(message, 3000);
-                    Toast.makeText(this, "Delete Operation Successful!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Delete Done!", Toast.LENGTH_SHORT).show();
 
                 } catch (Exception e) {
                     mHandler.sendMessage(message);
-                    Toast.makeText(this, "Update Operation Error", Toast.LENGTH_SHORT).show();
-
-                } finally {
-                    btn_main_update.setEnabled(true);
+                    Toast.makeText(this, "Update  Error", Toast.LENGTH_SHORT).show();
                 }
             } else {
                 Toast.makeText(this, "Please Verify Your Data Format Before Delete", Toast.LENGTH_SHORT).show();
@@ -264,7 +260,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mCityBean.setId(id);
             message_qry = "Query Data\n" +
                     "SELECT * FROM " + CityDBHelper.TableCity.TABLE_NAME +
-                    "WHERE ID = " + id;
+                    " WHERE ID = " + id;
         } else  if (TextUtils.isEmpty(id) && !TextUtils.isEmpty(province) && TextUtils.isEmpty(city) &&
                 TextUtils.isEmpty(district)) {
             mCityBean = new CityBean();
@@ -288,6 +284,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     "WHERE district = " + district;
         } else  if (TextUtils.isEmpty(id) && TextUtils.isEmpty(province) && TextUtils.isEmpty(city) &&
                 TextUtils.isEmpty(district)) {
+            /* *****                   **/
+            refreshList();
+
             Toast.makeText(this, "Please Specify At Least 1 Condition", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "Please Specify Only 1 Condition", Toast.LENGTH_SHORT).show();
@@ -308,7 +307,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mCityAdapter.notifyDataSetChanged();
 
                 mHandler.sendMessageDelayed(message, 3000);
-                Toast.makeText(this, "Query Operation Successful", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Query Done", Toast.LENGTH_SHORT).show();
             } else {
                 mHandler.sendMessage(message);
                 Toast.makeText(this, "Please Specify Condition", Toast.LENGTH_SHORT).show();
@@ -328,7 +327,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mHandler.sendMessageDelayed(message, 3000);
 
             refreshList();
-            Toast.makeText(this, "Reset Operation Successful", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Reset Done", Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -109,6 +109,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textAllCaps="false"
             android:text="@string/layout_main_reset_action"
             />
     </LinearLayout>
@@ -117,6 +118,7 @@
         android:id="@+id/tv_main_msg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:textSize="@dimen/activity_tv_txt_size"/>
 
     <LinearLayout

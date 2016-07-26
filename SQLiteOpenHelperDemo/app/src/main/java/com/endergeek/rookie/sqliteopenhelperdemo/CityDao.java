@@ -47,7 +47,7 @@ public class CityDao {
             };
             for (int i = 0; i < 10; i++) {
                 ContentValues values = new ContentValues();
-                values.put(CityDBHelper.TableCity.COLUMN_NAME_ID, i + 1);
+                values.put(CityDBHelper.TableCity.COLUMN_NAME_ID, String.valueOf(i+1));
                 values.put(CityDBHelper.TableCity.COLUMN_NAME_PROVINCE, provinces[i]);
                 values.put(CityDBHelper.TableCity.COLUMN_NAME_CITY, citys[i]);
                 values.put(CityDBHelper.TableCity.COLUMN_NAME_DISTRICT, districts[i]);
@@ -56,7 +56,7 @@ public class CityDao {
             db.setTransactionSuccessful();
 
         } catch (SQLException e) {
-            Log.e("initTable", String.valueOf(e));
+            Log.e(TAG, "initTable: ", e);
         } finally {
             if (db != null) {
                 db.endTransaction();
@@ -119,7 +119,7 @@ public class CityDao {
                 return list;
             }
         } catch (Exception e) {
-            Log.e("queryAll", String.valueOf(e));
+            Log.e(TAG, "selectAll: ", e);
         } finally {
             if (cursor != null) {
                 cursor.close();
@@ -137,7 +137,7 @@ public class CityDao {
             db.beginTransaction();
 
             ContentValues values = new ContentValues();
-            values.put(CityDBHelper.TableCity.COLUMN_NAME_ID, mCityBean.getId());
+            values.put(CityDBHelper.TableCity.COLUMN_NAME_ID, Integer.parseInt(mCityBean.getId()));
             values.put(CityDBHelper.TableCity.COLUMN_NAME_PROVINCE, mCityBean.getProvince());
             values.put(CityDBHelper.TableCity.COLUMN_NAME_CITY, mCityBean.getCity());
             values.put(CityDBHelper.TableCity.COLUMN_NAME_DISTRICT, mCityBean.getDistrict());
@@ -153,12 +153,12 @@ public class CityDao {
         }
     }
 
-    public void deleteData(int id) {
+    public void deleteData(String  id) {
         try {
             db = mCityDBHelper.getWritableDatabase();
             db.beginTransaction();
 
-            db.delete(CityDBHelper.TableCity.TABLE_NAME, "id = ?", new String[]{String.valueOf(id)});
+            db.delete(CityDBHelper.TableCity.TABLE_NAME, CityDBHelper.TableCity.COLUMN_NAME_ID + " = ?", new String[]{String.valueOf(id)});
             db.setTransactionSuccessful();
         } catch (Exception e) {
             Log.e("deleteData", String.valueOf(e));
@@ -189,10 +189,10 @@ public class CityDao {
                 values.put(CityDBHelper.TableCity.COLUMN_NAME_DISTRICT, mCityBean.getDistrict());
             }
 
-            db.update(CityDBHelper.TableCity.TABLE_NAME, values, "id = ?", new String[]{String.valueOf(mCityBean.getId())});
+            db.update(CityDBHelper.TableCity.TABLE_NAME, values, CityDBHelper.TableCity.COLUMN_NAME_ID + " = ?", new String[]{String.valueOf(mCityBean.getId())});
             db.setTransactionSuccessful();
         } catch (Exception e) {
-            Log.e("updateData", String.valueOf(e));
+            Log.e(TAG, "update: ", e);
         } finally {
             if (db != null) {
                 db.endTransaction();
@@ -206,8 +206,8 @@ public class CityDao {
 
         try {
             db = mCityDBHelper.getReadableDatabase();
-            if (!TextUtils.isEmpty(String.valueOf(mCityBean.getId()))) {
-                cursor = db.query(CityDBHelper.TableCity.TABLE_NAME, TABLE_COLUMNS, "id = ?",
+            if (!TextUtils.isEmpty(mCityBean.getId())) {
+                cursor = db.query(CityDBHelper.TableCity.TABLE_NAME, TABLE_COLUMNS, CityDBHelper.TableCity.COLUMN_NAME_ID + " = ?",
                         new String[]{mCityBean.getId()}, null, null, null);
                 if (cursor.getCount() > 0) {
                     List<CityBean> list = new ArrayList<>(cursor.getCount());
@@ -218,7 +218,7 @@ public class CityDao {
                 }
             }
             if (!TextUtils.isEmpty(mCityBean.getProvince())) {
-                cursor = db.query(CityDBHelper.TableCity.TABLE_NAME, TABLE_COLUMNS, "province = ?",
+                cursor = db.query(CityDBHelper.TableCity.TABLE_NAME, TABLE_COLUMNS, CityDBHelper.TableCity.COLUMN_NAME_PROVINCE + " = ?",
                         new String[]{(mCityBean.getProvince())}, null, null, null);
                 if (cursor.getCount() > 0) {
                     List<CityBean> list = new ArrayList<>(cursor.getCount());
@@ -229,7 +229,7 @@ public class CityDao {
                 }
             }
             if (!TextUtils.isEmpty(mCityBean.getCity())) {
-                cursor = db.query(CityDBHelper.TableCity.TABLE_NAME, TABLE_COLUMNS, "city = ?",
+                cursor = db.query(CityDBHelper.TableCity.TABLE_NAME, TABLE_COLUMNS, CityDBHelper.TableCity.COLUMN_NAME_CITY + " = ?",
                         new String[]{mCityBean.getCity()}, null, null, null);
                 if (cursor.getCount() > 0) {
                     List<CityBean> list = new ArrayList<>(cursor.getCount());
@@ -240,7 +240,7 @@ public class CityDao {
                 }
             }
             if (!TextUtils.isEmpty(mCityBean.getDistrict())) {
-                cursor = db.query(CityDBHelper.TableCity.TABLE_NAME, TABLE_COLUMNS, "district = ?",
+                cursor = db.query(CityDBHelper.TableCity.TABLE_NAME, TABLE_COLUMNS, CityDBHelper.TableCity.COLUMN_NAME_DISTRICT + " = ?",
                         new String[]{mCityBean.getDistrict()}, null, null, null);
                 if (cursor.getCount() > 0) {
                     List<CityBean> list = new ArrayList<>(cursor.getCount());
@@ -265,10 +265,10 @@ public class CityDao {
 
     public CityBean parseCityInfo(Cursor cursor) {
         CityBean mCityBean = new CityBean();
-        mCityBean.setId(String.valueOf(cursor.getInt(cursor.getColumnIndex("id"))));
-        mCityBean.setProvince(cursor.getString(cursor.getColumnIndex("province")));
-        mCityBean.setCity(cursor.getString(cursor.getColumnIndex("city")));
-        mCityBean.setDistrict(cursor.getString(cursor.getColumnIndex("district")));
+        mCityBean.setId(String.valueOf(cursor.getInt(cursor.getColumnIndex(CityDBHelper.TableCity.COLUMN_NAME_ID))));
+        mCityBean.setProvince(cursor.getString(cursor.getColumnIndex(CityDBHelper.TableCity.COLUMN_NAME_PROVINCE)));
+        mCityBean.setCity(cursor.getString(cursor.getColumnIndex(CityDBHelper.TableCity.COLUMN_NAME_CITY)));
+        mCityBean.setDistrict(cursor.getString(cursor.getColumnIndex(CityDBHelper.TableCity.COLUMN_NAME_DISTRICT)));
         return mCityBean;
     }
 }
