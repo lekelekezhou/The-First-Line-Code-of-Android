@@ -5,10 +5,11 @@ This repository implements some code sample in the official android site which m
 
 ###Demo List
  - MyFirstApp
- - MyFirstApp-CP
  - AndroidLifeCycleDemo
  - FragmentBasics
  - FragmentBasicLearn
+ - SQLiteOpenHelperDemo
+ - MyFirstApp-CP
 
 
 ###### MyFirstApp
@@ -16,24 +17,29 @@ This repository implements some code sample in the official android site which m
  - Key Words: Intent, onClick, putExtra, startActivity, parentActivityName, getIntent.
  - [Starting Another Activity](https://developer.android.com/training/basics/firstapp/starting-activity.html)
 
-###### MyFirstApp-CP
- - An Interactive Intent Demo between apps, Use Intent to Dial number inputted in first activity.
- - Key Words: Intent, ACTION_DIAL, packageManager, startActivityForResult, RESULT_OK, RESULT_CANCELLED, intent-filter, Uri, setResult
- - [Interacting with Other Apps](https://developer.android.com/training/basics/intents/index.html)
 
 
 ###### AndroidLifeCycleDemo
  - A Demo without any effects, Use DDMS to inspect Log.
- - Key Words: onCreate, onStart, onResume, onRestart, onPause, onStop, onDestory, onSaveInstanceState, onRestoreInstanceState
+ - Key Words: onCreate, onStart, onResume, onRestart, onPause, onStop, onDestory, onSaveInstanceState, onRestoreInstanceState.
  - [Managing the Activity Lifecycle](https://developer.android.com/training/basics/activity-lifecycle/starting.html)
 
 ###### FragmentBasics
  - Fragment Basic Demo, Display Headlines and Articles Based on Fragments, From Official Repo.
- - Key Words: Fragment, FrameLayout, FragmentTransaction, getSupportFragmentManager, addToBackStack
+ - Key Words: Fragment, FrameLayout, FragmentTransaction, getSupportFragmentManager, addToBackStack.
  - [Building a Dynamic UI with Fragments](https://developer.android.com/training/basics/fragments/index.html)
 
 ###### FragmentBasicLearn
  - Fragment Basic Demo, Display Headlines and Articles Based on Fragments, Test Edition.
- - Key Words: Fragment, FrameLayout, FragmentTransaction, getSupportFragmentManager, addToBackStack
+ - Key Words: Fragment, FrameLayout, FragmentTransaction, getSupportFragmentManager, addToBackStack.
  - [Building a Dynamic UI with Fragments](https://developer.android.com/training/basics/fragments/index.html)
 
+###### SQLiteOpenHelperDemo
+ - SQLiteOpenHelper Demo, Works with SQLite DataBase, other than Preferences or Files. with some improvement 
+ - Key Words: BaseColumns, SQLiteOpenHelper, ContentValues, moveToFirst, getColumnIndex, getReadableDatabase, getWritableDatabase, setEnabled.
+ - [Saving Data in SQL Databases](https://developer.android.com/training/basics/data-storage/databases.html)
+
+###### MyFirstApp-CP
+ - An Interactive Intent Demo between apps, Use Intent to Dial number inputted in first activity.
+ - Key Words: Intent, ACTION_DIAL, packageManager, startActivityForResult, RESULT_OK, RESULT_CANCELLED, intent-filter, Uri, setResult.
+ - [Interacting with Other Apps](https://developer.android.com/training/basics/intents/index.html)
