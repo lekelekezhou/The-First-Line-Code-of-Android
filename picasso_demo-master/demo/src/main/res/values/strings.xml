@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Picasso Demo</string>
+    <string name="picasso_once">One-off use</string>
+    <string name="photo_slider">Photo Slider</string>
+    <string name="contacts">Contacts</string>
+    <string name="photo_grid">Photos in a Grid</string>
+    <string name="photo_list">List of Photos</string>
+    <string name="one_off_blurb">In this Activity we use Picasso with its default singleton instance. This instance has the default values for everything.</string>
+    <string name="refresh">Refresh</string>
+    <string name="no_swatches">No swatch found</string>
+    <string name="swatch">Background: %1$s     Foreground: %2$s</string>
+
+
+</resources>
