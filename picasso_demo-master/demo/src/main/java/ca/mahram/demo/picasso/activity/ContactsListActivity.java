@@ -74,7 +74,7 @@ public class ContactsListActivity
                                        final long id) {
         final Contact contact = contactsAdapter.getItem (position);
         final Intent contactActivity = new Intent (this, ContactActivity.class);
-        contactActivity.setData (contact.getUri ());
+        contactActivity.setData (contact.getUri());
         startActivity (contactActivity);
     }
 }
