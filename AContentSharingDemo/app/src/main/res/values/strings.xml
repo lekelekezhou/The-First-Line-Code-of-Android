@@ -4,5 +4,7 @@
     <string name="send_to">WHO IS THIS</string>
     <string name="edit_string">Enter message to Share...</string>
     <string name="button_share">Share</string>
+    <string name="pic_select">Select a Pic.</string>
+    <string name="pic_text_hint">Click to select a Pic.</string>
 
 </resources>
