@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,11 +24,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // Set ImageButton background src.
-        imageView = (ImageView) findViewById(R.id.select_image_view);
-        imageView.setImageResource(R.drawable.avatar);
-
-        ImagePicker.setMinQuality(600, 600);
 
     }
 
@@ -46,22 +40,20 @@ public class MainActivity extends AppCompatActivity {
         if (bitmap != null) {
             imageView.setImageBitmap(bitmap);
         }
-
     }
 
     // TBD. 使用onActivityResult返回activity的图片（可能是造成崩溃的原因），需要修改，
     // 增加一些常见类和方法的笔记总结
-    // 文本分享怎么崩了？文本和图片分享居然绑定了。
+    // 文本分享怎么崩了？文本和图片分享居然绑定了。Fixed.
     public void shareImageTo(View view) {
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
 
-        ImageButton imageButton = (ImageButton) findViewById(R.id.select_image_view);
-
-        Bitmap bitmap = imageButton.getDrawingCache();
-
+        // Set ImageButton background src.
         imageView = (ImageView) findViewById(R.id.select_image_view);
         imageView.setImageResource(R.drawable.avatar);
+
+        ImagePicker.setMinQuality(100, 100);
 
     }
 

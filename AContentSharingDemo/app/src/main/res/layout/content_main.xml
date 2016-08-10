@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button_share"
-            android:onClick="sendTextMessage"/>
+            android:onClick="shareTextMessage"/>
 
     </LinearLayout>
 
@@ -59,11 +59,12 @@
             android:layout_width="match_parent"
             android:gravity="center"
             android:layout_weight="1">
-            <ImageButton
+            <ImageView
                 android:id="@+id/select_image_view"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:scaleType="fitXY"
+                android:src="@drawable/avatar"
                 android:textAllCaps="false"
                 android:onClick="onPickImage"/>
         </RelativeLayout>

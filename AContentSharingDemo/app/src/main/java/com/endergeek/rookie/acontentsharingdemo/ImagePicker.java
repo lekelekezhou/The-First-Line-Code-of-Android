@@ -24,8 +24,8 @@ import java.util.List;
 public class ImagePicker {
 
     private static final int PICK_IMAGE_ID = 234;
-    private static final int DEFAULT_MIN_WIDTH_QUALITY = 400;
-    private static final int DEFAULT_MIN_HEIGHT_QUALITY = 400;
+    private static final int DEFAULT_MIN_WIDTH_QUALITY = 100;
+    private static final int DEFAULT_MIN_HEIGHT_QUALITY = 100;
     private static final String TAG = ImagePicker.class.getSimpleName();
     private static final String TEMP_IMAGE_NAME = "tempImage";
 
@@ -35,7 +35,6 @@ public class ImagePicker {
     public static void pickImage(Activity activity, String chooserTitle) {
         Intent chooseImageIntent = getPickImageIntent(activity, chooserTitle);
         activity.startActivityForResult(chooseImageIntent, PICK_IMAGE_ID);
-
     }
 
     private static Intent getPickImageIntent(Context context, String chooserTitle) {
@@ -107,10 +106,12 @@ public class ImagePicker {
         do {
             bm = decodeBitmap(context, selectedImage, sampleSizes[i]);
             i++;
+
+            Log.i(TAG, "In Progress width = " + bm.getWidth() + "height: " + bm.getHeight());
         } while (bm != null &&
                 (bm.getWidth() < minWidthQuality || bm.getHeight() < minHeightQuality) &&
                 i < sampleSizes.length);
-
+        Log.i(TAG, "Final bitmap width = " + (bm != null ? bm.getWidth() : "No final bitmap"));
         return null;
     }
 
