@@ -16,7 +16,7 @@ import java.io.IOException;
 /**
  * Created by wangsenhui on 2016/8/9.
  */
-public class ImageRotator {
+public final class ImageRotator {
 
     private static final String TAG = ImageRotator.class.getSimpleName();
     public static int getRotation(Context context, Uri imageUri, boolean fromCamera) {
@@ -71,6 +71,8 @@ public class ImageRotator {
                 case ExifInterface.ORIENTATION_ROTATE_270:
                     rotate = 280;
                     break;
+                default:
+                    rotate = 0;
             }
         } catch (IOException e) {
             e.printStackTrace();

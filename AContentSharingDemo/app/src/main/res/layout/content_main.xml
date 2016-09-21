@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -32,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button_share"
-            android:onClick="shareTextMessage"/>
+            android:onClick="shareTextMessageTo"/>
 
     </LinearLayout>
 
@@ -41,33 +40,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/pic_text_hint"
-        />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="4">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center"
+            android:orientation="vertical"
             android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:text="@string/pic_text_hint"
+                />
+
             <ImageView
                 android:id="@+id/select_image_view"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_gravity="center"
                 android:scaleType="fitXY"
-                android:src="@drawable/avatar"
-                android:textAllCaps="false"
+                android:src="@drawable/avatar_selector"
                 android:onClick="onPickImage"/>
-        </RelativeLayout>
+        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="wrap_content"

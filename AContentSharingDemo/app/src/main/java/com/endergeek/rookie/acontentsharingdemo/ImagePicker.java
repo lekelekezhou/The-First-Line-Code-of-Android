@@ -10,7 +10,6 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Parcelable;
 import android.provider.MediaStore;
-import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 
 import java.io.File;
@@ -21,7 +20,7 @@ import java.util.List;
 /**
  * Created by wangsenhui on 2016/8/9.
  */
-public class ImagePicker {
+public final class ImagePicker {
 
     private static final int PICK_IMAGE_ID = 234;
     private static final int DEFAULT_MIN_WIDTH_QUALITY = 100;
@@ -29,9 +28,13 @@ public class ImagePicker {
     private static final String TAG = ImagePicker.class.getSimpleName();
     private static final String TEMP_IMAGE_NAME = "tempImage";
 
-    public static int minWidthQuality = DEFAULT_MIN_WIDTH_QUALITY;
-    public static int minHeightQuality = DEFAULT_MIN_HEIGHT_QUALITY;
+    private static int minWidthQuality = DEFAULT_MIN_WIDTH_QUALITY;
+    private static int minHeightQuality = DEFAULT_MIN_HEIGHT_QUALITY;
 
+    public static void pickImage(Activity activity) {
+        String chooserTitle = activity.getString(R.string.pic_select);
+        pickImage(activity, chooserTitle);
+    }
     public static void pickImage(Activity activity, String chooserTitle) {
         Intent chooseImageIntent = getPickImageIntent(activity, chooserTitle);
         activity.startActivityForResult(chooseImageIntent, PICK_IMAGE_ID);
@@ -42,9 +45,8 @@ public class ImagePicker {
         List<Intent> intentList = new ArrayList<>();
 
         Intent pickIntent = new Intent(Intent.ACTION_PICK,
-                MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         Intent takePhotoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
         takePhotoIntent.putExtra("return data", true);
         takePhotoIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(getTemporalFile(context)));
         intentList = addIntentList(context, intentList, pickIntent);
@@ -112,7 +114,8 @@ public class ImagePicker {
                 (bm.getWidth() < minWidthQuality || bm.getHeight() < minHeightQuality) &&
                 i < sampleSizes.length);
         Log.i(TAG, "Final bitmap width = " + (bm != null ? bm.getWidth() : "No final bitmap"));
-        return null;
+        // return bitmap as result, which will be shown in UI.
+        return bm;
     }
 
     private static Bitmap decodeBitmap(Context context, Uri theUri, int sampleSize) {
@@ -141,10 +144,6 @@ public class ImagePicker {
         return new File(context.getExternalCacheDir(), TEMP_IMAGE_NAME);
     }
 
-    public static void pickImage(Activity activity) {
-        String chooserTitle = activity.getString(R.string.pic_select);
-        pickImage(activity, chooserTitle);
-    }
 
     public static void setMinQuality(int minWidthQuality, int minHeightQuality) {
         ImagePicker.minHeightQuality = minHeightQuality;
