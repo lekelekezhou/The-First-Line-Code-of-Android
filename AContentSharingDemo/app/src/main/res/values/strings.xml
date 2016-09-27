@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">A Content Sharing Demo</string>
-    <string name="action_settings">Settings</string>
-    <string name="send_to">WHO IS THIS</string>
+    <string name="share_image_to">Share Image To</string>
     <string name="edit_string">Enter message to Share...</string>
-    <string name="button_share">Share</string>
-    <string name="pic_select">Select a Pic.</string>
+    <string name="button_text_share">Share</string>
+    <string name="button_img_share">Share Compressed Image</string>
+    <string name="pic_select">Select Your Image</string>
     <string name="pic_text_hint">Click to select a Pic.</string>
+    <string name="send_text_to" >Send Text To</string>
 
 </resources>

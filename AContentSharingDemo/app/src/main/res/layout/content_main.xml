@@ -30,7 +30,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_share"
+            android:text="@string/button_text_share"
             android:onClick="shareTextMessageTo"/>
 
     </LinearLayout>
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="2">
 
             <TextView
                 android:layout_width="match_parent"
@@ -71,16 +71,16 @@
         </LinearLayout>
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="3">
+            android:layout_weight="2">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:text="@string/button_share"
+                android:text="@string/button_img_share"
                 android:onClick="shareImageTo"/>
 
         </RelativeLayout>
