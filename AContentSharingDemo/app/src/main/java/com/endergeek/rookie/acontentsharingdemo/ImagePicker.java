@@ -30,6 +30,8 @@ public final class ImagePicker {
 
     private static int minWidthQuality = DEFAULT_MIN_WIDTH_QUALITY;
     private static int minHeightQuality = DEFAULT_MIN_HEIGHT_QUALITY;
+    public static Uri selectedImage;
+
 
     public static void pickImage(Activity activity) {
         String chooserTitle = activity.getString(R.string.pic_select);
@@ -81,7 +83,6 @@ public final class ImagePicker {
         Bitmap bm = null;
         if (resultCode == Activity.RESULT_OK && requestCode == PICK_IMAGE_ID) {
             File imageFile = getTemporalFile(context);
-            Uri selectedImage;
             boolean isCamera = (imageReturnedIntent == null ||
                     imageReturnedIntent.getData() == null ||
                     imageReturnedIntent.getData().toString().contains(imageFile.toString()));

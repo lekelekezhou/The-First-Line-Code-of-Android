@@ -63,22 +63,36 @@ public class MainActivity extends AppCompatActivity {
     // onClickListener?
     // 从ImagePicker中获取选择的图片Uri,待重写
     public void shareImageTo(View view) {
+        /*
+         * 以下代码段将发送应用内默认压缩率的图片
+         */
 
-        File cachePath = new File(Environment.getExternalStorageDirectory().getAbsolutePath() +  "/tmp.jpg");
-        Log.w(TAG, "cachePath: " + cachePath);
-        try {
-            cachePath.createNewFile();
-            FileOutputStream ostream = new FileOutputStream(cachePath);
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, ostream);
-            ostream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        Uri fileUri = ImagePicker.selectedImage;
+        Log.w(TAG, "fileUri: " + fileUri);
         Intent shareImageIntent = new Intent(Intent.ACTION_SEND);
         shareImageIntent.setType("image/*");
-        shareImageIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(cachePath));
+        shareImageIntent.putExtra(Intent.EXTRA_STREAM, fileUri);
         startActivity(Intent.createChooser(shareImageIntent, getResources().getText(R.string.share_image_to)));
+
+        /*
+         * 以下代码段将发送指定压缩率率的图片
+         */
+
+//        File cachePath = new File(Environment.getExternalStorageDirectory().getAbsolutePath() +  "/tmp.jpg");
+//        Log.w(TAG, "cachePath: " + cachePath);
+//        try {
+//            cachePath.createNewFile();
+//            FileOutputStream ostream = new FileOutputStream(cachePath);
+//            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, ostream);
+//            ostream.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        Intent shareImageIntent = new Intent(Intent.ACTION_SEND);
+//        shareImageIntent.setType("image/*");
+//        shareImageIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(cachePath));
+//        startActivity(Intent.createChooser(shareImageIntent, getResources().getText(R.string.share_image_to)));
 
     }
 
@@ -107,12 +121,12 @@ public class MainActivity extends AppCompatActivity {
         int hasWriteExternalStoragePermission = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         if (hasReadExternalStoragePermission == PackageManager.PERMISSION_GRANTED && hasWriteExternalStoragePermission == PackageManager.PERMISSION_GRANTED) {
             // Should we show an explanation ?
-            Toast.makeText(this, "All Permissions Granted", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Permissions Granted", Toast.LENGTH_SHORT).show();
         } else {
             // Show an explanation to the user *asynchronously* -- don't block
             // this thread waiting for the user's response! After the user
             // sees the explanation, try again to request the permission.
-            Toast.makeText(this, "All Permissions Denied", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Permissions Denied", Toast.LENGTH_SHORT).show();
             ActivityCompat.requestPermissions(
                     this,
                     PERMISSIONS_STORAGE,
