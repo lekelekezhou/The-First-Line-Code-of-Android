@@ -53,3 +53,9 @@ This repository implements some code sample in the official android site which m
  - A Permission Demo, Works with System Permissions, declare and request permissions at runtime, partially from Official Repo.
  - Key Words: uses-permission, checkSelfPermission, shouldShowRequestPermissionRationale, RequestPermissions, onRequestPermissionsResult.
  - [Working with System Permissions](https://developer.android.com/training/permissions/index.html)
+
+
+###### A Content Sharing Demo
+ - A Content Sharing Demo, Works with System Permissions, declare and request permissions at runtime, which is necessary when read/write external memory.Able to share text, set Compressed Image and share it later via apps.
+ - Key Words: uses-permission, checkSelfPermission, shouldShowRequestPermissionRationale, RequestPermissions, onRequestPermissionsResult, getPickImageIntent, getImageResized, decodeBitmap, getRotationFromGallery, getRotationFromCamera
+ - [Apps with Content Sharing](https://developer.android.com/training/building-content-sharing.html)
