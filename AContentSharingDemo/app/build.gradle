@@ -17,6 +17,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    productFlavors.all {
+        flavor->flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+    productFlavors {
+        wandoujia {}
+        baidu {}
+        c360 {}
+        uc {}
+    }
 }
 
 dependencies {
