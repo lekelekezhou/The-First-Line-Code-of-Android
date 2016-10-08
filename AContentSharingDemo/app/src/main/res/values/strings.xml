@@ -7,5 +7,8 @@
     <string name="pic_select">Select Your Image</string>
     <string name="pic_text_hint">Click to select a Pic.</string>
     <string name="send_text_to" >Send Text To</string>
+    <string name="btn_back_text">Exit</string>
+    <string name="btn_secondary_text">Back to Before</string>
+    <string name="btn_goto_secondary">Go to Second Activity</string>
 
 </resources>

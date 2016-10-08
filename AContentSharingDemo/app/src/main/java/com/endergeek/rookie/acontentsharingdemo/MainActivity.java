@@ -4,25 +4,18 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -48,7 +41,26 @@ public class MainActivity extends AppCompatActivity {
         imageView = (ImageView) findViewById(R.id.select_image_view);
         ImagePicker.setMinQuality(100, 100);
 
-
+        Button buttonGotoSecond = (Button) findViewById(R.id.btn_goto_secondary);
+        buttonGotoSecond.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 隐式Intent，与在AndroidManifest.xml中定义的<action>一致，以启动intent
+                Intent intent = new Intent(".MainActivity.ACTION_START");
+                startActivity(intent);
+                // 显式Intent
+//                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+//                startActivity(intent);
+            }
+        });
+        Button buttonBack = (Button) findViewById(R.id.btn_back);
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 点击以销毁活动
+                finish();
+            }
+        });
     }
 
     @Override

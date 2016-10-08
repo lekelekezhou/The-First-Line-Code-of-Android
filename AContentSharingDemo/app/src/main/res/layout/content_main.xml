@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -13,6 +12,7 @@
     tools:showIn="@layout/activity_main">
 
     <LinearLayout
+        android:id="@+id/ly_text_share_area"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
@@ -37,10 +37,14 @@
 
 
     <TextView
+        android:id="@+id/tv_title"
+        android:layout_below="@+id/ly_text_share_area"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <LinearLayout
+        android:id="@+id/ly_img_share_area"
+        android:layout_below="@id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -87,4 +91,31 @@
 
 
     </LinearLayout>
-</LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rl_back"
+        android:layout_below="@+id/ly_img_share_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom|center"
+        >
+
+        <Button
+            android:id="@+id/btn_goto_secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="@string/btn_goto_secondary"
+            />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btn_goto_secondary"
+            android:textAllCaps="false"
+            android:text="@string/btn_back_text"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>
