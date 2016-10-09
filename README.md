@@ -4,13 +4,14 @@
 This repository implements some code sample in the official android site which may work fine under Android Studio 2.0 and Android  API 23 or higher.
 
 ###Demo List
- - MyFirstApp
+ 1. MyFirstApp
  - AndroidLifeCycleDemo
  - FragmentBasics
  - FragmentBasicLearn
  - SQLiteOpenHelperDemo
  - AnInteractiveIntentDemo
  - APermissionDemo
+ - AContentSharingDemo
 
 
 ###### MyFirstApp
@@ -56,6 +57,6 @@ This repository implements some code sample in the official android site which m
 
 
 ###### A Content Sharing Demo
- - A Content Sharing Demo, Works with System Permissions, declare and request permissions at runtime, which is necessary when read/write external memory.Able to share text, set Compressed Image and share it later via apps.Packing Demo of Android Studio.
- - Key Words: uses-permission, checkSelfPermission, shouldShowRequestPermissionRationale, RequestPermissions, onRequestPermissionsResult, getPickImageIntent, getImageResized, decodeBitmap, getRotationFromGallery, getRotationFromCamera
+ - A Content Sharing Demo, Works with System Permissions, declare and request permissions at runtime, which is necessary when read/write external memory.Able to share text, set Compressed Image and share it later via apps.Query IP Location, learn more about intent as well as intent-filter,action,category,data:scheme,mimeType...Also a Packing Demo of Android Studio.
+ - Key Words: uses-permission, checkSelfPermission, shouldShowRequestPermissionRationale, RequestPermissions, onRequestPermissionsResult, getPickImageIntent, getImageResized, decodeBitmap, getRotationFromGallery, getRotationFromCamera, startActivityForResult, requestCode, resultCode, onBackPressed, setData, putExtra, addCategory, finish
  - [Apps with Content Sharing](https://developer.android.com/training/building-content-sharing.html)
