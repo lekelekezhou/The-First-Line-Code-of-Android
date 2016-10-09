@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     public final static String EXTRA_MESSAGE = "com.endergeek.rookie.acontentsharingdemo.MESSAGE";
     private static final String TAG = "MainActivity";
+    private static final int INTENT_ID = 2000;
 
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static String[] PERMISSIONS_STORAGE = {
@@ -45,35 +46,74 @@ public class MainActivity extends AppCompatActivity {
         buttonGotoSecond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 隐式Intent，与在AndroidManifest.xml中定义的<action>一致，以启动intent
-                Intent intent = new Intent(".MainActivity.ACTION_START");
-                startActivity(intent);
+                /*
+                 * 启动活动2
+                 * 隐式Intent，与在AndroidManifest.xml中定义的<action>一致，以启动intent
+                 * 自定义Category(一般不使用)前缀必须加上以保证唯一性
+                 */
+                Intent intent = new Intent("com.endergeek.rookie.acontentsharingdemo.SecondActivity.ACTION_START");
+                intent.addCategory("com.endergeek.rookie.acontentsharingdemo.SecondActivity.CUSTOM_CATEGORY");
+                startActivityForResult(intent, INTENT_ID);
                 // 显式Intent
 //                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
 //                startActivity(intent);
             }
         });
+
+        Button buttonGotoThird = (Button) findViewById(R.id.btn_goto_third);
+        buttonGotoThird.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*
+                 * 启动活动3
+                 * 在对应 intent-filter 中配置响应的 action = Intent.ACTION_VIEW,category = DEFAULT, scheme = http
+                 * ThirdActivity如果能够加载并显示网页，则能够响应一个打开网页的Intent，否则，默认行为是选择打开程序：浏览器 或者 ThirdActivity
+                 */
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://cn.bing.com"));
+                startActivity(intent);
+            }
+        });
+
         Button buttonBack = (Button) findViewById(R.id.btn_back);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 点击以销毁活动
+                // 点击以销毁活动，退出应用
                 finish();
             }
         });
     }
 
+    /**
+     * @param requestCode 请求码
+     * @param resultCode 结果代码, setResult中设定
+     * @param data 携带返回数据的intent
+     */
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        bitmap = ImagePicker.getImageFromResult(this, requestCode, resultCode, data);
-        if (bitmap != null) {
-            imageView.setImageBitmap(bitmap);
+        switch (requestCode) {
+            case 1000:
+                bitmap = ImagePicker.getImageFromResult(this, requestCode, resultCode, data);
+                if (bitmap != null) {
+                    imageView.setImageBitmap(bitmap);
+                }
+                break;
+            case 2000:
+                if (resultCode == RESULT_OK) {
+                    String returnedData = data.getStringExtra("data_return");
+                    Log.i(TAG, "Return Data: " + returnedData);
+                }
+                break;
+            default:
+                break;
         }
     }
 
-    // 增加一些常见类和方法的笔记总结
-    // onClickListener?
-    // 从ImagePicker中获取选择的图片Uri,待重写
+    /**
+     * 增加一些常见类和方法的笔记总结
+     * 从ImagePicker中获取选择的图片Uri,待重写
+     */
     public void shareImageTo(View view) {
         /*
          * 以下代码段将发送应用内默认压缩率的图片
@@ -126,6 +166,16 @@ public class MainActivity extends AppCompatActivity {
         sendTextIntent.putExtra(Intent.EXTRA_TEXT, message);
         sendTextIntent.setType("text/plain");
         startActivity(Intent.createChooser(sendTextIntent, getResources().getText(R.string.send_text_to)));
+    }
+
+    public void queryIpWeb(View view){
+
+        // 调用系统浏览器查询ip归属地
+        Intent queryIpIntent = new Intent(Intent.ACTION_VIEW);
+        EditText editText = (EditText) findViewById(R.id.et_ip_area);
+        String message = editText.getText().toString();
+        queryIpIntent.setData(Uri.parse("http://www.ip138.com/ips138.asp?action=2&ip=" + message));
+        startActivity(queryIpIntent);
     }
 
     private void checkPermission() {

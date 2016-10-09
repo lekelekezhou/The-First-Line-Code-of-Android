@@ -9,6 +9,13 @@
     <string name="send_text_to" >Send Text To</string>
     <string name="btn_back_text">Exit</string>
     <string name="btn_secondary_text">Back to Before</string>
-    <string name="btn_goto_secondary">Go to Second Activity</string>
+    <string name="btn_goto_secondary">Goto Second</string>
+    <string name="edit_ip_string">Enter ip to query...</string>
+    <string name="et_ip_string">0123456789.</string>
+    <string name="btn_ip_query">Query</string>
+    <string name="app_second_activity">Second Activity</string>
+    <string name="btn_thrid_text">Third Button</string>
+    <string name="app_third_activity">Third Activity</string>
+    <string name="btn_goto_third">Goto Third</string>
 
 </resources>

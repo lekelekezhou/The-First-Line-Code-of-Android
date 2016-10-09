@@ -22,7 +22,7 @@ import java.util.List;
  */
 public final class ImagePicker {
 
-    private static final int PICK_IMAGE_ID = 234;
+    private static final int PICK_IMAGE_ID = 1000;
     private static final int DEFAULT_MIN_WIDTH_QUALITY = 100;
     private static final int DEFAULT_MIN_HEIGHT_QUALITY = 100;
     private static final String TAG = ImagePicker.class.getSimpleName();
