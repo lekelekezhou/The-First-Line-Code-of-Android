@@ -10,6 +10,7 @@ import android.widget.Button;
 
 /**
  * Created by sennhviwang on 10/10/16.
+ * Namely the FirstActivity
  */
 public class MainActivity extends Activity {
     public static final String TAG = "com.endergeek.rookie.MainActivity";

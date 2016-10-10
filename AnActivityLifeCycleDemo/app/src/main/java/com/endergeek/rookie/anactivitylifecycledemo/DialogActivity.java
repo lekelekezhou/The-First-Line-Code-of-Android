@@ -7,7 +7,7 @@ import android.view.Window;
 
 /**
  * Created by sennhviwang on 10/10/16.
- * class below is named as ThirdActivity
+ * Namely the ThirdActivity
  */
 public class DialogActivity extends Activity{
     private static final String TAG = "com.endergeek.rookie.anactivitylifecycledemo.dialogactivity";

@@ -10,7 +10,7 @@ import android.widget.Button;
 
 /**
  * Created by sennhviwang on 10/10/16.
- * class below is named as SecondActivity
+ * Namely the SecondActivity
  */
 public class NormalActivity extends Activity {
     private static final String TAG = "com.endergeek.rookie.anactivitylifecycledemo.NormalActivity";

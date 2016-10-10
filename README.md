@@ -12,6 +12,7 @@ This repository implements some code sample in the official android site which m
  - AnInteractiveIntentDemo
  - APermissionDemo
  - AContentSharingDemo
+ - AnActivityLifeCycleDemo
 
 
 ###### MyFirstApp
@@ -60,3 +61,10 @@ This repository implements some code sample in the official android site which m
  - A Content Sharing Demo, Works with System Permissions, declare and request permissions at runtime, which is necessary when read/write external memory.Able to share text, set Compressed Image and share it later via apps.Query IP Location, learn more about intent as well as intent-filter,action,category,data:scheme,mimeType...Also a Packing Demo of Android Studio.
  - Key Words: uses-permission, checkSelfPermission, shouldShowRequestPermissionRationale, RequestPermissions, onRequestPermissionsResult, getPickImageIntent, getImageResized, decodeBitmap, getRotationFromGallery, getRotationFromCamera, startActivityForResult, requestCode, resultCode, onBackPressed, setData, putExtra, addCategory, finish
  - [Apps with Content Sharing](https://developer.android.com/training/building-content-sharing.html)
+
+
+###### An Activity LifeCycle Demo
+ - An Activity LifeCycle Demo for understanding the lifecycle of Normal and Dialog activites as well as four different launch modes:standard,singleTop,singleTask and singleInstance.For a better understandable experience, some screenshots were added to the root directory of corresponding project which may be helpful in the procedure of learning activity lifecyle and four launch modes.
+ -Key Words: requestWindowFeature, savedInstanceState, onSaveInstanceState,  setOnClickListener,onCreate, onStart, onResume, onRestart, onPause, onStop, onDestory, @android:style/Theme.Dialog, launchMode
+ - [Managing the Activity Lifecycle](https://developer.android.com/training/basics/activity-lifecycle/starting.html)
+ - [第一行代码实例](https://book.douban.com/subject/25942191/)
