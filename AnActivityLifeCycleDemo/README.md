@@ -11,21 +11,21 @@
 
 ---
 
-###### **Normal Activity & Dialog Activity**
+#### **Normal Activity & Dialog Activity**
 ![Normal&DialogLifeCycleCapture](https://github.com/sennhviwang/Android-Learn-Journey/blob/master/AnActivityLifeCycleDemo/Normal%26DialogLifeCycleCapture.png)
 
-###### **standard Mode**
+#### **standard Mode**
 ![standardModeCapture](https://github.com/sennhviwang/Android-Learn-Journey/blob/master/AnActivityLifeCycleDemo/standardModeCapture.png)
 
-###### **singleTop Mode**
+#### **singleTop Mode**
 ![singleTopModeCapture](
 https://github.com/sennhviwang/Android-Learn-Journey/blob/master/AnActivityLifeCycleDemo/singleTopModeCapture.png)
 
-###### **singleTask Mode**
+#### **singleTask Mode**
 ![singleTaskModeCapture](
 https://github.com/sennhviwang/Android-Learn-Journey/blob/master/AnActivityLifeCycleDemo/singleTaskModeCapture.png)
 
-###### **singleInstance Mode**
+#### **singleInstance Mode**
 ![singleInstanceModeCapture](https://github.com/sennhviwang/Android-Learn-Journey/blob/master/AnActivityLifeCycleDemo/singleInstanceModeCapture.png)
 
 
