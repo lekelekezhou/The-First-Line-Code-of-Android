@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">An Activity LifeCycle Demo</string>
+    <string name="title_normal_activity">This is a normal activity</string>
+    <string name="title_dialog_activity">This is a dialog activity</string>
+    <string name="btn_start_normal_activity">Start NormalActivity</string>
+    <string name="btn_start_dialog_activity">Start DialogActivity</string>
+    <string name="btn_test_mode">Test Mode Case</string>
+    <string name="btn_singletop_mode">Test SingleTop Mode</string>
+</resources>
