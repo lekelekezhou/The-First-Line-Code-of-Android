@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * Created by sennhviwang on 10/10/16.
@@ -23,9 +24,13 @@ public class MainActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
+        /**
+         * 活动被回收之前会调用 onSaveInstanceState保存临时数据。可以通过: 进入其他活动(NormalActivity) -> 在最近活动中删掉该应用
+         * -> 重新进入该应用 -> 将重新启动MainActivity看见Toast文本
+         */
         if (savedInstanceState != null) {
             String tempData = savedInstanceState.getString("data_key");
-            Log.d(TAG, tempData);
+            Toast.makeText(this, tempData, Toast.LENGTH_LONG).show();
         }
 
         Button startNormalActivity = (Button) findViewById(R.id.btnStartNormalActivity);
