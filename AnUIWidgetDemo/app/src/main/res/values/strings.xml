@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">An UI Widget Demo</string>
+    <string name="btn_main_test">Test Button</string>
+    <string name="et_main_test_hint">Enter something</string>
+    <string name="btn_main_test_alert">Test Alert Button</string>
+    <string name="btn_main_test_progress">Test Progress Button</string>
+    <string name="btn_main_test_nouse">Send</string>
+    <string name="tv_no_use_section">No Use Section</string>
+    <string name="btn_linear_1_text">NoAction Button 1</string>
+    <string name="btn_linear_2_text">NoAction Button 2</string>
+    <string name="btn_linear_3_text">NoAction Button 3</string>
+    <string name="btn_goto_linearlayout">Goto LinearLayout</string>
+    <string name="btn_goto_relativelayout">Goto RelativeLayout</string>
+    <string name="btn_goto_framelayout">Goto FrameLayout</string>
+    <string name="btn_goto_tablelayout">Goto TableLayout</string>
+    <string name="btn_linear_back_main_text">Back to Main</string>
+    <string name="btn_relative_back_main_text">Back to Main</string>
+    <string name="btn_frame_back_main_text">Back to Main</string>
+    <string name="btn_table_back_main_text">Back to Main</string>
+    <string name="btn_relative_1_text">NoAction Button 1</string>
+    <string name="btn_relative_2_text">NoAction Button 2</string>
+    <string name="btn_relative_4_text">NoAction Button 4</string>
+    <string name="btn_relative_3_text">NoAction Button 3</string>
+    <string name="btn_relative_5_text">NoAction Button 5</string>
+    <string name="btn_relative_6_text">NoAction Button 6</string>
+    <string name="btn_relative_7_text">NoAction Button 7</string>
+    <string name="btn_relative_8_text">NoAction Button 8</string>
+    <string name="app_linear_activity">LinearLayout Activity</string>
+    <string name="app_relative_activity">RelativeLayout Activity</string>
+    <string name="app_frame_activity">FrameLayout Activity</string>
+    <string name="app_table_activity">Table Activity</string>
+    <string name="et_table_hint_text">Input Something...</string>
+    <string name="tv_table_password">Password:</string>
+    <string name="tv_table_account">Account:</string>
+    <string name="tv_table_hint_password">Input your Password...</string>
+    <string name="btn_table_login">Login</string>
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.endergeek.rookie.anuiwidgetdemo.MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        style="@style/AllTextUniformStyle"
+        android:text="An UI Widget Demo" />
+
+    <Button
+        android:id="@+id/btnMainTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/AllTextUniformStyle"
+        android:text="@string/btn_main_test"
+        />
+
+    <EditText
+        android:id="@+id/etMainTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        style="@style/AllTextUniformStyle"
+        android:hint="@string/et_main_test_hint"
+        />
+
+    <ImageView
+        android:id="@+id/imgMainTest"
+        android:layout_width="@dimen/img_main_test_width"
+        android:layout_height="@dimen/img_main_test_height"
+        android:src="@drawable/avatar_normal"
+        />
+
+    <!--小圆圈style="@android:style/Widget.ProgressBar.Small"-->
+    <ProgressBar
+        android:id="@+id/pgBarMainTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="100"
+        />
+
+    <Button
+        android:id="@+id/btnMainTestAlert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/AllTextUniformStyle"
+        android:text="@string/btn_main_test_alert"
+        />
+
+    <Button
+        android:id="@+id/btnMainTestProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/AllTextUniformStyle"
+        android:text="@string/btn_main_test_progress"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/btnGotoLinearLayout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            style="@style/AllTextUniformStyle"
+            android:text="@string/btn_goto_linearlayout"
+            />
+        <Button
+            android:id="@+id/btnGotoRelativeLayout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            style="@style/AllTextUniformStyle"
+            android:text="@string/btn_goto_relativelayout"
+            />
+        <Button
+            android:id="@+id/btnGotoFrameLayout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            style="@style/AllTextUniformStyle"
+            android:text="@string/btn_goto_framelayout"
+            />
+        <Button
+            android:id="@+id/btnGotoTableLayout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            style="@style/AllTextUniformStyle"
+            android:text="@string/btn_goto_tablelayout"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

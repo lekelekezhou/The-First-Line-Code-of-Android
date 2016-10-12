@@ -1,6 +1,10 @@
 # An Activity LifeCycle Demo
 
-### Illustration Procedure of Activity LifeCycle
+### Overview
+
+Use activities to demonstrate lifecyle in android
+
+### Table of contents
 
 1. Normal Activity & Dialog Activity
 - Activity Lifecycle in 4 Modes:
