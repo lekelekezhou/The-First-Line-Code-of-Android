@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/LightBlue"
+    >
+
+    <Button
+        android:id="@+id/btnTitleBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:background="@color/LightBlue"
+        android:text="@string/activity_title_back"
+        android:textColor="@color/color_fff"
+        />
+
+    <TextView
+        android:id="@+id/tvTitleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/activity_title_text"
+        android:textColor="@color/color_fff"
+        android:textSize="@dimen/activity_title_text_size"
+        />
+
+    <Button
+        android:id="@+id/btnTitleEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:background="@color/LightBlue"
+        android:text="@string/activity_title_edit"
+        android:textColor="@color/color_fff"
+        />
+
+</LinearLayout>

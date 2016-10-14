@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">A ListView Demo</string>
+    <string name="tv_fruit_name">Fruit Name</string>
+</resources>
