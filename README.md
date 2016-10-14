@@ -75,7 +75,7 @@ This repository implements some code sample in the official android site which m
 ###### AnUIWidgetDemo
  - An UI Widget Demo for demonstrating a list of widgets and common used layouts such as RelativeLayout.An improvement has been made to respond all clickable events in onClick method.DOOONot forget to register your activities in AndroidManifest.xml file.Also note that an explicit Intent don't need declare more about intent-filter.
  - ``Key Words``: onClick, ProgressBar, setProgress, setImageResource, setVisibility, getVisibility, AlertDialog.Builder, setTitle, setMessage, setCancelable, setPositiveButton, setNegativeButton, show, ProgressDialog, layout_alignParentLeft|Bottom|Right|Top, layout_toRight|Left|Bottom|TopOf, layout_weight, FrameLayout, TableLayout, android:stretchColumns, layout_span
- - [First Code of Android-UI实例](https://book.douban.com/subject/25942191/)
+ - [First Code of Android-UI](https://book.douban.com/subject/25942191/)
 
 ###### AnUICustomViewDemo
  - A simply implemented custom View demo demonstrates how to construct and invoke custom layout based on LinearLayout
