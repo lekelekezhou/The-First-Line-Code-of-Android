@@ -84,6 +84,6 @@ This repository implements some code sample in the official android site which m
  - [Difference between getContext(), getApplicationContext(), getBaseContext(), this](http://stackoverflow.com/questions/10641144/difference-between-getcontext-getapplicationcontext-getbasecontext-and)
 
 ###### AListViewDemo
- - 
- - ``Key Words``: 
- - 
+ - A Demo of ListView with custom and native adapter for entity class(Fruit in this case).
+ - ``Key Words``: Abstract Class, List, Entity Class, ArrayAdapter, setAdapter, getItem, getView, LayoutInflater.from(getContext()).inflate(id, null), 
+ - [LayoutInflater](https://developer.android.com/reference/android/view/LayoutInflater.html)
