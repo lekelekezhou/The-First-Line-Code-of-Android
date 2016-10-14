@@ -70,12 +70,12 @@ This repository implements some code sample in the official android site which m
  - An Activity LifeCycle Demo for understanding the lifecycle of Normal and Dialog activites as well as four different launch modes:standard,singleTop,singleTask and singleInstance.For a better understandable experience, some screenshots were added to the root directory of corresponding project which may be helpful in the procedure of learning activity lifecyle and four launch modes.
  - ``Key Words``: requestWindowFeature, savedInstanceState, onSaveInstanceState,  setOnClickListener,onCreate, onStart, onResume, onRestart, onPause, onStop, onDestory, @android:style/Theme.Dialog, launchMode
  - [Managing the Activity Lifecycle](https://developer.android.com/training/basics/activity-lifecycle/starting.html)
- - [第一行代码-LifeCycle实例](https://book.douban.com/subject/25942191/)
+ - [First Code of Android-LifeCycle](https://book.douban.com/subject/25942191/)
  
 ###### AnUIWidgetDemo
  - An UI Widget Demo for demonstrating a list of widgets and common used layouts such as RelativeLayout.An improvement has been made to respond all clickable events in onClick method.DOOONot forget to register your activities in AndroidManifest.xml file.Also note that an explicit Intent don't need declare more about intent-filter.
  - ``Key Words``: onClick, ProgressBar, setProgress, setImageResource, setVisibility, getVisibility, AlertDialog.Builder, setTitle, setMessage, setCancelable, setPositiveButton, setNegativeButton, show, ProgressDialog, layout_alignParentLeft|Bottom|Right|Top, layout_toRight|Left|Bottom|TopOf, layout_weight, FrameLayout, TableLayout, android:stretchColumns, layout_span
- - [第一行代码-UI实例](https://book.douban.com/subject/25942191/)
+ - [First Code of Android-UI实例](https://book.douban.com/subject/25942191/)
 
 ###### AnUICustomViewDemo
  - A simply implemented custom View demo demonstrates how to construct and invoke custom layout based on LinearLayout
