@@ -6,7 +6,6 @@ This repository implements some code sample in the official android site which m
 ###Demo List
  1. MyFirstApp
  - AndroidLifeCycleDemo
- - FragmentBasics
  - FragmentBasicLearn
  - SQLiteOpenHelperDemo
  - AnInteractiveIntentDemo
@@ -28,12 +27,6 @@ This repository implements some code sample in the official android site which m
  - A Demo without any effects, Use DDMS to inspect Log.
  - ``Key Words``: onCreate, onStart, onResume, onRestart, onPause, onStop, onDestory, onSaveInstanceState, onRestoreInstanceState.
  - [Managing the Activity Lifecycle](https://developer.android.com/training/basics/activity-lifecycle/starting.html)
-
-
-###### FragmentBasics
- - Fragment Basic Demo, Display Headlines and Articles Based on Fragments, From Official Repo.
- - ``Key Words``: Fragment, FrameLayout, FragmentTransaction, getSupportFragmentManager, addToBackStack.
- - [Building a Dynamic UI with Fragments](https://developer.android.com/training/basics/fragments/index.html)
 
 
 ###### FragmentBasicLearn
