@@ -2,13 +2,19 @@ package com.endergeek.rookie.alistviewdemo;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends Activity {
+
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     private String[] data = { "Apple", "Banana", "Orange", "Watermelon", "Pear",
             "Grape", "Pineapple", "Strawberry", "Cherry", "Mango" };
@@ -19,6 +25,14 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /**
+         * 获取屏幕的密度值
+         */
+        float xdpi = getResources().getDisplayMetrics().xdpi;
+        float ydpi = getResources().getDisplayMetrics().ydpi;
+        Log.w(TAG, "xdpi" + xdpi);
+        Log.w(TAG, "ydpi" + ydpi);
 
         // 定制ListView用法 Begin
         /**
@@ -47,17 +61,19 @@ public class MainActivity extends Activity {
 //        listView.setAdapter(adapter);
         // 简单用法End
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Fruit fruit = fruitList.get(i);
+                Toast.makeText(MainActivity.this, fruit.getFruitName(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void initFruits() {
-        Fruit apples = new Fruit("Sad", R.drawable.ic_mood_bad_black_18dp);
-        Fruit banana = new Fruit("Smile", R.drawable.ic_mood_black_18dp);
-        Fruit orange = new Fruit("Sorrow", R.drawable.ic_sentiment_dissatisfied_black_18dp);
-
-        for(int i = 0; i < 100; i++ ) {
-            fruitList.add(apples);
-            fruitList.add(banana);
-            fruitList.add(orange);
+        for (int i = 0; i < 1000; i++) {
+            Fruit fruit = new Fruit("Click" + i, R.drawable.ic_mood_bad_black_18dp);
+            fruitList.add(fruit);
         }
     }
 }

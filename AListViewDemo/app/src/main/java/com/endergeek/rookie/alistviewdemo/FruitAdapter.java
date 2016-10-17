@@ -29,30 +29,42 @@ public class FruitAdapter extends ArrayAdapter<Fruit>{
     }
 
     /**
+     * NOTE： 性能瓶颈，每次都将重新加载布局
      * 重写getView方法，其在每个子项被滚动到屏幕内的时候调用
      * 接着从此view获取并设置的元素ImageView, TextView
-     *
      * @param position
-     * @param convertView
+     * @param convertView 用于将之间加载好的布局进行缓存，为二次加载提速
      * @param parent
      * @return
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        Fruit fruit = getItem(position); // 获取当前项的Fruit实例
+        ViewHolder viewHolder;
         /**
-         * 获取当前项的Fruit实例
+         * convertView 为 null则初始化，并设置 viewHolder对象，将 viewHolder存储在 view中
+         * 否则重新获取 ViewHolder，setTag 存数据；getTag 取数据
+         * 结果： 所有控件实例都缓存在了 ViewHolder里，无需继续findViewById
          */
-        Fruit fruit = getItem(position);
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(resourceId, null);
+            viewHolder = new ViewHolder();
+            viewHolder.fruitImage = (ImageView) convertView.findViewById(R.id.imgItemFruit);
+            viewHolder.fruitName = (TextView) convertView.findViewById(R.id.tvItemText);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (ViewHolder) convertView.getTag();
+        }
         /**
          * LayoutInflater加载传入的布局 resourceId:textViewResourceId 作为 view
          */
-        View view = LayoutInflater.from(getContext()).inflate(resourceId, null);
+        viewHolder.fruitImage.setImageResource(fruit.getFruitImageId());
+        viewHolder.fruitName.setText(fruit.getFruitName());
+        return convertView;
+    }
 
-        ImageView fruitImage = (ImageView) view.findViewById(R.id.imgItemFruit);
-        TextView fruitName = (TextView) view.findViewById(R.id.tvItemText);
-
-        fruitImage.setImageResource(fruit.getFruitImageId());
-        fruitName.setText(fruit.getFruitName());
-        return view;
+    private static class ViewHolder {
+        ImageView fruitImage;
+        TextView fruitName;
     }
 }
