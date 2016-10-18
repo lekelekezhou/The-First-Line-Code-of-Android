@@ -25,7 +25,7 @@
 
 
 ###### AndroidLifeCycleDemo
- - 炒鸡简单的生命周期示例，需要使用``DDMS``来查看日志
+ - 简单的生命周期示例，需要使用``DDMS``来查看日志
  - ``Key Words``: onCreate, onStart, onResume, onRestart, onPause, onStop, onDestory, onSaveInstanceState, onRestoreInstanceState.
  - [Managing the Activity Lifecycle](https://developer.android.com/training/basics/activity-lifecycle/starting.html)
 
@@ -55,7 +55,7 @@
 
 
 ###### A Content Sharing Demo
- - 内容分享示例，在读写存储空间时有必要在运行时声明和请求系统权限，功能包括输入和分享文本，设置压缩图片结果并支持分享，通过调用浏览器查询``Ip``地址位置，学习更多关于``Intent``内容如``intent-filter``,``action``,``category``,``data:scheme``,``mimeType``等，同时也是使用``Android Studio``分渠道打包示例
+ - 内容分享示例，在读写存储空间时有必要在运行时声明和请求系统权限，功能包括输入和分享文本，设置压缩图片结果并支持分享，通过调用浏览器查询``IP``地址位置，学习更多关于``Intent``内容如``intent-filter``,``action``,``category``,``data:scheme``,``mimeType``等，同时也是使用``Android Studio``分渠道打包示例
  - ``Key Words``: uses-permission, checkSelfPermission, shouldShowRequestPermissionRationale, RequestPermissions, onRequestPermissionsResult, getPickImageIntent, getImageResized, decodeBitmap, getRotationFromGallery, getRotationFromCamera, startActivityForResult, requestCode, resultCode, onBackPressed, setData, putExtra, addCategory, finish
  - [Apps with Content Sharing](https://developer.android.com/training/building-content-sharing.html)
 
@@ -68,7 +68,6 @@
  
 ###### AnUIWidgetDemo
  - 演示一些常见组件和布局的UI示例，在``onClick``中使用``switch``集中处理点击事件，``NOTE``：务必在``AndroidManifest.xml``文件中注册你的``activity``，显式``Intent``并不需要在``intent-filter``中声明太多东西
- An UI Widget Demo for demonstrating a list of widgets and common used layouts such as RelativeLayout.An improvement has been made to respond all clickable events in onClick method.DOOONot forget to register your activities in AndroidManifest.xml file.Also note that an explicit Intent don't need declare more about intent-filter.
  - ``Key Words``: onClick, ProgressBar, setProgress, setImageResource, setVisibility, getVisibility, AlertDialog.Builder, setTitle, setMessage, setCancelable, setPositiveButton, setNegativeButton, show, ProgressDialog, layout_alignParentLeft|Bottom|Right|Top, layout_toRight|Left|Bottom|TopOf, layout_weight, FrameLayout, TableLayout, android:stretchColumns, layout_span
  - [First Code of Android-UI](https://book.douban.com/subject/25942191/)
 
