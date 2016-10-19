@@ -83,6 +83,6 @@
  - [LayoutInflater](https://developer.android.com/reference/android/view/LayoutInflater.html)
 
 ###### AnUIBestPractice
- - ``Adapter``的第二例子，使用``draw9patc``h制作``Nine-Patch``图片，左&上边框表示拉伸区域，右&下边框表示内容放置区域。
+ - ``Adapter``的第二例子，使用``draw9patch``制作``Nine-Patch``图片，左&上边框表示拉伸区域，右&下边框表示内容放置区域。
  - ``Key Words``: Abstract Class, List, Entity Class, ArrayAdapter, setAdapter, getItem, getView, LayoutInflater.from(getContext()).inflate(id, null), ViewHolder, setTag, getTag, notifyDataSetChanged, setSelection
  - [BaseAdapter](https://developer.android.com/reference/android/widget/BaseAdapter.html)
