@@ -16,3 +16,4 @@
  - ``notifyDataSetChanged``
  - ``setSelection``
  - [BaseAdapter](https://developer.android.com/reference/android/widget/BaseAdapter.html)
+ - [9-patch](http://www.cnblogs.com/tinyphp/p/3826219.html)
