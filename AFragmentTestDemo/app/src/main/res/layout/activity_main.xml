@@ -9,23 +9,24 @@
     <fragment
         android:id="@+id/fragmentLeft"
         android:name="com.endergeek.rookie.afragmenttestdemo.LeftFragment"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_weight="1"
         tools:layout="@layout/fragment_left" />
 
-    <!--<FrameLayout-->
-        <!--android:id="@+id/frameLayoutRight"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_weight="1"-->
-        <!--&gt;-->
-        <!--<fragment-->
-            <!--android:id="@+id/fragmentRight"-->
-            <!--android:name="com.endergeek.rookie.afragmenttestdemo.RightFragment"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--tools:layout="@layout/fragment_right" />-->
+    <FrameLayout
+        android:id="@+id/frameLayoutRight"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+        <fragment
+            android:id="@+id/fragmentRight"
+            android:name="com.endergeek.rookie.afragmenttestdemo.RightFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_right" />
 
-    <!--</FrameLayout>-->
+    </FrameLayout>
 
 </LinearLayout>

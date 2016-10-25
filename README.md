@@ -16,6 +16,8 @@
  - AnUICustomViewDemo
  - AListViewDemo
  - AnUIBestPractice
+ - AFragmentTestDemo
+ - AFragmentBestPractice
 
 
 ###### MyFirstApp
@@ -86,3 +88,13 @@
  - ``Adapter``的第二例子，使用``draw9patch``制作``Nine-Patch``图片，左&上边框表示拉伸区域，右&下边框表示内容放置区域。
  - ``Key Words``: Abstract Class, List, Entity Class, ArrayAdapter, setAdapter, getItem, getView, LayoutInflater.from(getContext()).inflate(id, null), ViewHolder, setTag, getTag, notifyDataSetChanged, setSelection
  - [BaseAdapter](https://developer.android.com/reference/android/widget/BaseAdapter.html)
+
+###### AFragmentTestDemo
+ - 替换fragment的例子，简述fragment生命周期，fragment与activity之间通信
+ - ``Key Words``: onAttach, onCreate, onCreateView, onActivityCreated, onStart, onResume, onPause, onStop, onDestroyView, onDestroy, onDetach, FragmentTransaction, getSupportFragmentManager, getActivity
+ - [Fragment Lifecycle](https://developer.android.com/guide/components/fragments.html)
+
+###### AFragmentBestPractice
+ - listview+fragment+adapter结合使用，手机与平板适配demo
+ - ``Key Words``: activity_main.xml(平板适配), onAttach, onCreateView, onActivityCreated, onItemClick, actionStart, android:name, tools:layout
+ - [Building a Dynamic UI with Fragments](https://developer.android.com/training/basics/fragments/fragment-ui.html)

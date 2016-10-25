@@ -28,14 +28,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-//            case R.id.btnFragmentLeft:
-//                AnotherRightFragment fragment = new AnotherRightFragment(); // 创建待添加的fragment实例
-//                FragmentManager fragmentManager = getSupportFragmentManager(); // 获取FragmentManager
-//                FragmentTransaction transaction = fragmentManager.beginTransaction(); // 开始事务
-//                transaction.replace(R.id.frameLayoutRight, fragment); // 使用replace向容器中加入fragment，需要容器id和待添加的fragment实例
-//                transaction.addToBackStack(null); // 添加到返回栈，null为名称
-//                transaction.commit(); // 提交事务
-//                break;
+            case R.id.btnFragmentLeft:
+                AnotherRightFragment fragment = new AnotherRightFragment(); // 创建待添加的fragment实例
+                FragmentManager fragmentManager = getSupportFragmentManager(); // 获取FragmentManager
+                FragmentTransaction transaction = fragmentManager.beginTransaction(); // 开始事务
+                transaction.replace(R.id.frameLayoutRight, fragment); // 使用replace向容器中加入fragment，需要容器id和待添加的fragment实例
+                transaction.addToBackStack(null); // 添加到返回栈，null为名称
+                transaction.commit(); // 提交事务
+                break;
             default:
                 break;
         }
