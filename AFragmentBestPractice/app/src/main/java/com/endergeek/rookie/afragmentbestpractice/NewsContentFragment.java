@@ -2,6 +2,7 @@ package com.endergeek.rookie.afragmentbestpractice;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,12 @@ public class NewsContentFragment extends Fragment {
         return view;
     }
 
+    /**
+     * textView.setMovementMethod(new ScrollingMovementMethod()); + scrollbars="vertical"
+     * 即可让TextView滚动起来
+     * @param newsTitle
+     * @param newsContent
+     */
     public void refresh(String newsTitle, String newsContent) {
         View visibilityLayout = view.findViewById(R.id.llayout_visibility);
         visibilityLayout.setVisibility(View.VISIBLE);
@@ -27,5 +34,6 @@ public class NewsContentFragment extends Fragment {
         TextView newsContentText = (TextView) view.findViewById(R.id.tvNewsContent);
         newsTitleText.setText(newsTitle);
         newsContentText.setText(newsContent);
+        newsContentText.setMovementMethod(new ScrollingMovementMethod());
     }
 }

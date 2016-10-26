@@ -2,7 +2,7 @@
 
 ### Overview
 
-listview+fragment+adapter结合使用，手机与平板适配demo
+listview+fragment+adapter结合使用，手机与平板适配demo，textview文本过长滚屏
 
 ### Table of contents
  1. ``MainActivity``
@@ -24,3 +24,5 @@ listview+fragment+adapter结合使用，手机与平板适配demo
  - ``actionStart``借鉴列参数方式
  - ``android:name``
  - ``tools:layout``
+ - ``android:scrollbars = "vertical"``
+ - ``yourTextView.setMovementMethod(new ScrollingMovementMethod());``

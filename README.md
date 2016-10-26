@@ -96,5 +96,5 @@
 
 ###### AFragmentBestPractice
  - listview+fragment+adapter结合使用，手机与平板适配demo
- - ``Key Words``: activity_main.xml(平板适配), onAttach, onCreateView, onActivityCreated, onItemClick, actionStart, android:name, tools:layout
+ - ``Key Words``: activity_main.xml(平板适配), onAttach, onCreateView, onActivityCreated, onItemClick, actionStart, android:name, tools:layout, android:scrollbars, tv.setMovementMethod(new ScrollingMovementMethod())
  - [Building a Dynamic UI with Fragments](https://developer.android.com/training/basics/fragments/fragment-ui.html)
