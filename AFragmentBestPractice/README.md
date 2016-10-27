@@ -26,3 +26,4 @@ listview+fragment+adapter结合使用，手机与平板适配demo，textview文�
  - ``tools:layout``
  - ``android:scrollbars = "vertical"``
  - ``yourTextView.setMovementMethod(new ScrollingMovementMethod());``
+ - ``<receiver>``
