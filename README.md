@@ -34,7 +34,7 @@
  - [Managing the Activity Lifecycle](https://developer.android.com/training/basics/activity-lifecycle/starting.html)
 
 
-###### Fragment Basic Learn
+###### [Fragment Basic Learn](https://github.com/sennhviwang/Android-Learn-Journey/tree/master/FragmentBasicLearn)
  - ``Fragment``基础示例，使用``Fragment``显示标题和正文
  - ``Key Words``: Fragment, FrameLayout, FragmentTransaction, getSupportFragmentManager, addToBackStack.
  - [Building a Dynamic UI with Fragments](https://developer.android.com/training/basics/fragments/index.html)
