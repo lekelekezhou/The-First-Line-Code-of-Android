@@ -20,6 +20,7 @@
  - A Fragment Best Practice
  - A Broadcast Test Demo
  - A Broadcast Best Practice
+ - A Data Persistence 4 File Demo
 
 
 ###### [My First App](https://github.com/sennhviwang/Android-Learn-Journey/tree/master/MyFirstApp)
@@ -109,6 +110,12 @@
 
 ###### [A Broadcast Best Practice](https://github.com/sennhviwang/Android-Learn-Journey/tree/master/ABroadcastBestPractice)
  - 广播机制的最佳实践-强制下线功能，此demo突然涉及Android 6.0 Draw over other apps高级权限，不能像一般权限那样在运行时请求获取，需要引导至开关处打开
- - ``Key Words``: Intent("CUSTOM_STRING_IN_MANIFEST_BROADCAST_RECEIVER), BaseActivity, ActivityCollector, Build.VERSION.SDK_INT, Settings.ACTION_MANAGE_OVERLAY_PERMISSION, <receiver>, List<Activity>, AlertDialog.Builder, intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK), dialogBuilder.create, alertDialog.getWindow().setType, TYPE_SYSTEM_ALERT
+ - ``Key Words``: Intent("CUSTOM_STRING_IN_MANIFEST_BROADCAST_RECEIVER), BaseActivity, ActivityCollector, Build.VERSION.SDK_INT, Settings.ACTION_MANAGE_OVERLAY_PERMISSION, ``<receiver>``, ``List<Activity>``, AlertDialog.Builder, intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK), dialogBuilder.create, alertDialog.getWindow().setType, TYPE_SYSTEM_ALERT
  - [AlertDialog](https://developer.android.com/reference/android/app/AlertDialog.html)
  - [Dialog](https://developer.android.com/reference/android/app/Dialog.html)
+
+###### [A Data Persistence 4 File Demo](https://github.com/sennhviwang/Android-Learn-Journey/tree/master/ADataPersistence4FileDemo)
+ - 向Internal Storage中写入文件
+ - ``Key Words``:TextUtils.isEmpty, setSelection, FileOutputStream, openFileOutput, OutputStreamWriter, BufferedWriter, BufferedWriter.write, BufferedWriter.close, FileInputStream, StringBuilder, StringBuilder.append, openFileInput, InputStreamReader, BufferedReader, BufferedReader.readLine, BufferedReader.close, ActivityCompat.requestPermissions(activity, PERMISSION_ARRAY, REQUEST_CODE)
+ - [FileOutputStream](https://developer.android.com/reference/java/io/FileOutputStream.html)
+ - [FileInputStream](https://developer.android.com/reference/java/io/FileInputStream.html)
