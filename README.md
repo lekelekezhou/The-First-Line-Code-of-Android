@@ -102,6 +102,6 @@
 
 ###### A Broadcast Test Demo
  - 全局广播与本地广播，标准广播与有序广播
- - ``Key Words``: IntentFilter, NetworkChangeReceiver, LocalBroadcastManager, sendBroadcast, sendOrderedBroadcast, addAction, registerReceiver, unregisterReceiver, ConnectivityManager, NetworkInfo, BroadReceiver, Custom Toast, abortBroadcast, receiver, android.intent.action.BOOT_COMPLETED, , anroid:priority
+ - ``Key Words``: IntentFilter, NetworkChangeReceiver, LocalBroadcastManager, sendBroadcast, sendOrderedBroadcast, addAction, registerReceiver, unregisterReceiver, ConnectivityManager, NetworkInfo, BroadReceiver, Custom Toast, abortBroadcast, receiver, android.intent.action.BOOT_COMPLETED, anroid:priority
  - [sendBroadcast](https://developer.android.com/reference/android/content/Context.html#sendBroadcast(android.content.Intent, java.lang.String))
  - [Manifest.permission](https://developer.android.com/reference/android/Manifest.permission.html)
