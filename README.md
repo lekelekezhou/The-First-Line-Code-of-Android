@@ -4,25 +4,25 @@
 ``Android``开发的一些代码示例，由易到难，由简单到复杂的实现，来自官方文档以及《第一行代码》中的实现。测试环境：``Android Studio 2.0``，``API 23``及更高
 
 ### Demo List
- 1. My First App
- - Android LifeCycle Demo
- - Fragment Basic Learn
- - SQLite OpenHelper Demo(High)
- - An Interactive Intent Demo
- - A Permission Demo
- - A Content Sharing Demo
- - An Activity LifeCycle Demo
- - An UI Widget Demo
- - An UI Custom View Demo
- - A List View Demo
- - An UI Best Practice
- - A Fragment Test Demo
- - A Fragment Best Practice
- - A Broadcast Test Demo
- - A Broadcast Best Practice
- - A Data Persistence 4 File Demo
- - A Data Persistence 4 SharedPreferences
- - A SQLite Database Demo(medium)
+ 1. [My First App](https://github.com/sennhviwang/Android-Learn-Journey#my-first-app)
+ - [Android LifeCycle Demo](https://github.com/sennhviwang/Android-Learn-Journey#android-lifecycle-demo)
+ - [Fragment Basic Learn](https://github.com/sennhviwang/Android-Learn-Journey#fragment-basic-learn)
+ - [SQLite OpenHelper Demo(High)](https://github.com/sennhviwang/Android-Learn-Journey#sqlite-openhelper-demo)
+ - [An Interactive Intent Demo](https://github.com/sennhviwang/Android-Learn-Journey#an-interactive-intent-demo)
+ - [A Permission Demo](https://github.com/sennhviwang/Android-Learn-Journey#a-permission-demo)
+ - [A Content Sharing Demo](https://github.com/sennhviwang/Android-Learn-Journey#a-content-sharing-demo)
+ - [An Activity LifeCycle Demo](https://github.com/sennhviwang/Android-Learn-Journey#an-activity-lifecycle-demo)
+ - [An UI Widget Demo](https://github.com/sennhviwang/Android-Learn-Journey#an-ui-widget-demo)
+ - [An UI Custom View Demo](https://github.com/sennhviwang/Android-Learn-Journey#an-ui-custom-view-demo)
+ - [A List View Demo](https://github.com/sennhviwang/Android-Learn-Journey#a-listview-demo)
+ - [An UI Best Practice](https://github.com/sennhviwang/Android-Learn-Journey#an-ui-best-practice)
+ - [A Fragment Test Demo](https://github.com/sennhviwang/Android-Learn-Journey#a-fragment-test-demo)
+ - [A Fragment Best Practice](https://github.com/sennhviwang/Android-Learn-Journey#a-fragment-best-practice)
+ - [A Broadcast Test Demo](https://github.com/sennhviwang/Android-Learn-Journey#a-broadcast-test-demo)
+ - [A Broadcast Best Practice](https://github.com/sennhviwang/Android-Learn-Journey#a-broadcast-best-practice)
+ - [A Data Persistence 4 File Demo](https://github.com/sennhviwang/Android-Learn-Journey#a-data-persistence-4-file-demo)
+ - [A Data Persistence 4 SharedPreferences](https://github.com/sennhviwang/Android-Learn-Journey#a-data-persistence-4-sharedpreferences)
+ - [A SQLite Database Demo(medium)](https://github.com/sennhviwang/Android-Learn-Journey#a-sqlite-database-demomedium)
 
 
 ###### [My First App](https://github.com/sennhviwang/Android-Learn-Journey/tree/master/MyFirstApp)
