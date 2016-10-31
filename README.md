@@ -7,7 +7,7 @@
  1. My First App
  - Android LifeCycle Demo
  - Fragment Basic Learn
- - SQLite OpenHelper Demo
+ - SQLite OpenHelper Demo(High)
  - An Interactive Intent Demo
  - A Permission Demo
  - A Content Sharing Demo
@@ -22,6 +22,7 @@
  - A Broadcast Best Practice
  - A Data Persistence 4 File Demo
  - A Data Persistence 4 SharedPreferences
+ - A SQLite Database Demo(medium)
 
 
 ###### [My First App](https://github.com/sennhviwang/Android-Learn-Journey/tree/master/MyFirstApp)
@@ -122,8 +123,15 @@
  - [FileOutputStream](https://developer.android.com/reference/java/io/FileOutputStream.html)
  - [FileInputStream](https://developer.android.com/reference/java/io/FileInputStream.html)
 
-###### [A Data Persistence 4 SharedPreferences]((https://github.com/sennhviwang/Android-Learn-Journey/tree/master/ADataPersistence4SharedPreferences))
+###### [A Data Persistence 4 SharedPreferences](https://github.com/sennhviwang/Android-Learn-Journey/tree/master/ADataPersistence4SharedPreferences)
  - 使用SharedPreferences存储，读取数据：三种获取SharedPreferences对象的方法，存储数据的三步，读取数据的两步，结合广播最佳实践，实现登录保存密码例子,详见项目内
  - ``Key Words``:getSharedPreferences, getPreferences, getDefaultSharedPreferences, edit(), putString, putInt, putBoolean, commit, getSharedPreferences(FILE_NAME, MODE), SharedPreferences, getString(KEY, DEFAULT_VALUE),
 CheckBox, setChecked(true), isChecked() 
  - [Shared preferences](https://developer.android.com/training/basics/data-storage/shared-preferences.html)
+
+###### [A SQLite Database Demo(medium)](https://github.com/sennhviwang/Android-Learn-Journey/tree/master/ASQLiteDatabaseDemo)
+ - ``SQLite``数据库实例，增删查改，以及使用事务，数据库的创建和升级方式，使用``adb shell``打开并进入数据库目录:``/data/data/PACKAGE_NAME/databases/``，``sqlite3 BookStore.db``查看数据库，``.table``查看表， ``.schema``查看建表语句， ``.exit``退出， 此例子不是最好实践，建议参考[SQLite OpenHelper Demo](https://github.com/sennhviwang/Android-Learn-Journey/tree/master/SQLiteOpenHelperDemo)
+ - ``Key Words``:SQLiteOpenHelper构造函数(context, name, factory, version), onCreate, onUpgrade, getWritableDatabase, SQLiteDatabase, myDatabaseHelper.getWritableDatabase();, ContentValues, contentValues.put(KEY, VALUE);, sqliteDatabase.insert(TABLE, NULLABLECOLUMN, MAP_VALUE);, sqliteDatabase.update(TABLE, MAP_VALUE, SELECTION, SELECTION_ARGS);, sqliteDatabase.delete(TABLE, SELECTION, SELECTION_ARGS);, sqliteDatabase.query(TABLE, COLUMN, WHERE_COLUMN, WHERE_VALUE, NO_GROUP_ROW, NO_FILTER_ROW, SORTED);, cursor.moveToFirst, cursor.getString(cursor.getColumnIndex(VALUE));, cursor.moveToNext
+cursor.close, sqliteDatabase.beginTransaction, sqliteDatabase.setTransactionSuccessful, sqliteDatabase.endTransaction
+ - [Databases](https://developer.android.com/training/basics/data-storage/databases.html#UpdateDbRow)
+ - [SQLiteDatabase](https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html)
