@@ -21,6 +21,7 @@
  - A Broadcast Test Demo
  - A Broadcast Best Practice
  - A Data Persistence 4 File Demo
+ - A Data Persistence 4 SharedPreferences
 
 
 ###### [My First App](https://github.com/sennhviwang/Android-Learn-Journey/tree/master/MyFirstApp)
@@ -117,5 +118,12 @@
 ###### [A Data Persistence 4 File Demo](https://github.com/sennhviwang/Android-Learn-Journey/tree/master/ADataPersistence4FileDemo)
  - 向Internal Storage中写入文件
  - ``Key Words``:TextUtils.isEmpty, setSelection, FileOutputStream, openFileOutput, OutputStreamWriter, BufferedWriter, BufferedWriter.write, BufferedWriter.close, FileInputStream, StringBuilder, StringBuilder.append, openFileInput, InputStreamReader, BufferedReader, BufferedReader.readLine, BufferedReader.close, ActivityCompat.requestPermissions(activity, PERMISSION_ARRAY, REQUEST_CODE)
+ - [Saving files](https://developer.android.com/training/basics/data-storage/files.html)
  - [FileOutputStream](https://developer.android.com/reference/java/io/FileOutputStream.html)
  - [FileInputStream](https://developer.android.com/reference/java/io/FileInputStream.html)
+
+###### [A Data Persistence 4 SharedPreferences]((https://github.com/sennhviwang/Android-Learn-Journey/tree/master/ADataPersistence4SharedPreferences))
+ - 使用SharedPreferences存储，读取数据：三种获取SharedPreferences对象的方法，存储数据的三步，读取数据的两步，结合广播最佳实践，实现登录保存密码例子,详见项目内
+ - ``Key Words``:getSharedPreferences, getPreferences, getDefaultSharedPreferences, edit(), putString, putInt, putBoolean, commit, getSharedPreferences(FILE_NAME, MODE), SharedPreferences, getString(KEY, DEFAULT_VALUE),
+CheckBox, setChecked(true), isChecked() 
+ - [Shared preferences](https://developer.android.com/training/basics/data-storage/shared-preferences.html)
