@@ -117,7 +117,7 @@
  - [Dialog](https://developer.android.com/reference/android/app/Dialog.html)
 
 ###### [A Data Persistence 4 File Demo](https://github.com/sennhviwang/Android-Learn-Journey/tree/master/ADataPersistence4FileDemo)
- - 向Internal Storage中写入文件
+ - 向Internal Storage中写入文件，快速请求权限（DEMO专用）
  - ``Key Words``:TextUtils.isEmpty, setSelection, FileOutputStream, openFileOutput, OutputStreamWriter, BufferedWriter, BufferedWriter.write, BufferedWriter.close, FileInputStream, StringBuilder, StringBuilder.append, openFileInput, InputStreamReader, BufferedReader, BufferedReader.readLine, BufferedReader.close, ActivityCompat.requestPermissions(activity, PERMISSION_ARRAY, REQUEST_CODE)
  - [Saving files](https://developer.android.com/training/basics/data-storage/files.html)
  - [FileOutputStream](https://developer.android.com/reference/java/io/FileOutputStream.html)
