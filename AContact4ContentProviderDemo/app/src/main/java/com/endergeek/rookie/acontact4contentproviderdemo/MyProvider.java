@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 
 /**
  * Created by wangsenhui on 11/1/16.
+ * 此应用为纯粹 Content Provider实例，无数据，具体实例参见 A SQLite Database Demo 和 A Provider4Database Test
  */
 public class MyProvider extends ContentProvider{
 

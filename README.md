@@ -137,4 +137,23 @@ cursor.close, sqliteDatabase.beginTransaction, sqliteDatabase.setTransactionSucc
  - [SQLiteDatabase](https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html)
 
 
+时间赶，快速编辑，待整理
+
 [Content Provider详解](http://codingnow.cn/android/1078.html)
+
+[通知 Guide](https://developer.android.com/guide/topics/ui/notifiers/notifications.html)
+[Notification API](https://developer.android.com/reference/android/app/Notification.html)
+[Notification.Builder](https://developer.android.com/reference/android/app/Notification.Builder.html)
+[PendingIntent](https://developer.android.com/reference/android/app/PendingIntent.html)
+[NotificationManager](https://developer.android.com/reference/android/app/NotificationManager.html)
+
+[SMSMessage](https://developer.android.com/reference/android/telephony/SmsMessage.html)
+[BroadcastReceiver](https://developer.android.com/reference/android/content/BroadcastReceiver.html) getResultCode()
+
+java.lang.NullPointerException: Attempt to get length of null array sendTextMessage时，要检查每个值存在不为null
+
+[ContentResolver](https://developer.android.com/reference/android/content/ContentResolver.html)This class provides applications access to the content model.
+
+[MediaPlayer Guide](https://developer.android.com/guide/topics/media/mediaplayer.html)
+[MediaPlayer Reference](https://developer.android.com/reference/android/media/MediaPlayer.html)
+
