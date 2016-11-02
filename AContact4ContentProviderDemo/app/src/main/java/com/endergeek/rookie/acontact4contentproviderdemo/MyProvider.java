@@ -66,6 +66,10 @@ public class MyProvider extends ContentProvider{
         return null;
     }
 
+    /**
+     * 详细实践参考 A SQLiteDatabase Demo
+     * String bookId = uri.getPathSegments().get(1); 将内容URI权限（AUTHORITY）之后的部分以“/”划分，1为id,0为路径
+     */
     @Nullable
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {

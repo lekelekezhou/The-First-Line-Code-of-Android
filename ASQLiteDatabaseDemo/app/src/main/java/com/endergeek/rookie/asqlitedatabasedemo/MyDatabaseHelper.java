@@ -34,7 +34,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(CREATE_BOOK);
         sqLiteDatabase.execSQL(CREATE_CATEGORY);
-        Toast.makeText(mContext, "DB Created", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(mContext, "DB Created", Toast.LENGTH_SHORT).show();
     }
 
     /**

@@ -135,3 +135,6 @@ CheckBox, setChecked(true), isChecked()
 cursor.close, sqliteDatabase.beginTransaction, sqliteDatabase.setTransactionSuccessful, sqliteDatabase.endTransaction
  - [Databases](https://developer.android.com/training/basics/data-storage/databases.html#UpdateDbRow)
  - [SQLiteDatabase](https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html)
+
+
+[Content Provider详解](http://codingnow.cn/android/1078.html)
