@@ -78,6 +78,7 @@ public class VideoPlay extends AppCompatActivity implements View.OnClickListener
                 if (videoView != null) {
                     videoView.resume();
                     initVideo();
+                    videoView.start();
                 }
                 break;
             default:
