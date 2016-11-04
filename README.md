@@ -157,3 +157,8 @@ java.lang.NullPointerException: Attempt to get length of null array sendTextMess
 [MediaPlayer Guide](https://developer.android.com/guide/topics/media/mediaplayer.html)
 [MediaPlayer Reference](https://developer.android.com/reference/android/media/MediaPlayer.html)
 
+[java.lang.IllegalStateException](http://stackoverflow.com/questions/7816551/java-lang-illegalstateexception-what-does-it-mean)
+
+before calling player.start(), you have to run setDataSource() and prepare(), according to the State Diagram of the MediaPlayer reference.
+
+mediaplayer state machine
