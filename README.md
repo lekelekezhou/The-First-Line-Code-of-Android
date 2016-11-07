@@ -164,3 +164,7 @@ before calling player.start(), you have to run setDataSource() and prepare(), ac
 mediaplayer state machine
 
 [videoview](https://developer.android.com/reference/android/widget/VideoView.html)
+
+Thread
+
+Service,IntentService
