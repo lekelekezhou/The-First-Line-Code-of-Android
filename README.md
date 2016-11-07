@@ -162,3 +162,5 @@ java.lang.NullPointerException: Attempt to get length of null array sendTextMess
 before calling player.start(), you have to run setDataSource() and prepare(), according to the State Diagram of the MediaPlayer reference.
 
 mediaplayer state machine
+
+[videoview](https://developer.android.com/reference/android/widget/VideoView.html)
