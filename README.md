@@ -167,4 +167,15 @@ mediaplayer state machine
 
 Thread
 
-Service,IntentService
+[Service](https://developer.android.com/reference/android/app/Service.html),
+[IntentService](https://developer.android.com/reference/android/app/IntentService.html)
+
+[AlarmManager StackOverflow](http://stackoverflow.com/questions/38094420/android-alarmmanager-setexact-is-not-exact)
+
+getBroadcast
+[进程和线程](https://developer.android.com/guide/components/processes-and-threads.html#Processes)
+
+[HttpClient移除](https://developer.android.com/about/versions/marshmallow/android-6.0-changes.html#behavior-apache-http-client)
+
+[NGINX测试环境配置]
+

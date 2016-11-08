@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">A Network Test</string>
+    <string name="text_send_request">Send Request</string>
+    <string name="text_input_request">Input address</string>
+</resources>

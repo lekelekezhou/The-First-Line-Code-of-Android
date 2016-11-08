@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 /**
- * Android de UI线程不安全，更新UI元素需要在主线程中进行
+ * Android的UI线程不安全，更新UI元素需要在主线程中进行
  * 本例使用Handler处理异步消息，也可以使用继承AsyncTask<Params, Progress, Result>，并在doInBackground()中
  * 执行耗时任务，onProgressUpdate()中执行UI操作，onPostExecute()中执行任务结束工作
  */
