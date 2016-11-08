@@ -179,3 +179,5 @@ getBroadcast
 
 [NGINX测试环境配置]
 
+XML Pull/SAX
+JSON JSONObject/Gson
