@@ -186,3 +186,5 @@ JSON解析 JSONObject/Gson
 
 [FileNotFound Exception:setDoOutput 405](http://stackoverflow.com/questions/9365829/filenotfoundexception-for-httpurlconnection-in-ice-cream-sandwich)
 
+LocationManager未测试，更多LBS查看相应API
+

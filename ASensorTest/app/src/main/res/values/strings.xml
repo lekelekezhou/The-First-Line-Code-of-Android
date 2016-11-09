@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">A Sensor Test</string>
+    <string name="tv_light_text">Light Level</string>
+    <string name="tv_orientation_text">Orientation</string>
+</resources>

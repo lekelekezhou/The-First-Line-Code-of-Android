@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.endergeek.rookie.asensortest.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_light_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/tv_light_text_size"
+        android:text="@string/tv_light_text"
+        />
+
+    <TextView
+        android:id="@+id/tv_orientation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/tv_light_text_size"
+        android:text="@string/tv_orientation_text"
+        />
+    <ImageView
+        android:id="@+id/img_compass"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:src="@drawable/compass"
+        />
+</LinearLayout>
