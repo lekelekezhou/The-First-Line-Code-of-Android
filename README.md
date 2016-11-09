@@ -179,5 +179,10 @@ getBroadcast
 
 [NGINX测试环境配置]
 
-XML Pull/SAX
-JSON JSONObject/Gson
+XML解析 Pull/SAX
+JSON解析 JSONObject/Gson
+
+回调接口
+
+[FileNotFound Exception:setDoOutput 405](http://stackoverflow.com/questions/9365829/filenotfoundexception-for-httpurlconnection-in-ice-cream-sandwich)
+

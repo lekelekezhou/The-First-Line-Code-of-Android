@@ -40,7 +40,7 @@ import javax.xml.parsers.SAXParserFactory;
  * }
  * 解析XML: Pull 与 SAX 方式
  * 解析JSON: JSONObject 与 GSON，需要在app的build.gradle中引入 compile 'com.google.code.gson:gson:2.8.0'
- *
+ * HttpURLConnection请求方式: 子线程处理(MainActivity) 与 回调接口处理(HttpCallbackListener + HttpUtil)
  */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -93,13 +93,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 address = "http://" + inputString;
             }
             Log.d(TAG,address);
-            sendRendRequestWithHttpURLConnection();
+            /**
+             * 请求方式二选一：多线程与回调接口
+             * 注:此处onFinish与onError仍然是在子线程中执行，更新UI操作需要使用异步消息处理在主线程中更新
+             */
+//            sendRendRequestWithHttpURLConnection();
+            HttpUtil.sendHttpRequest(address, new HttpCallbackListener() {
+                @Override
+                public void onFinish(String response) {
+                    Log.d(TAG, "onfinish" + response);
+                    parseJSONWithGSON(response);
+                }
+
+                @Override
+                public void onError(Exception e) {
+                    Log.e(TAG, String.valueOf(e));
+                }
+            });
         }
     }
 
     private void sendRendRequestWithHttpURLConnection() {
-        // 开启线程来发起网络请求，耗时操作，依然类似内部类，可能造成内存泄露
-        // 消息队列MessageQueue应在使用后**清空释放**
+        /**
+         * 开启线程来发起网络请求，耗时操作，依然类似内部类，可能造成内存泄露
+         * 消息队列MessageQueue应在使用后**清空释放**
+         * 一般将此处网络操作提取到一个公共类的静态方法中，详见HttpUtil与HttpCallbackListener
+         */
         new Thread(new Runnable() {
             @Override
             public void run() {
