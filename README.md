@@ -188,3 +188,13 @@ JSON解析 JSONObject/Gson
 
 LocationManager未测试，更多LBS查看相应API
 
+Sensor,GPS,Light,Magnetic,Accelerator
+
+RotateAnimation
+
+[Vibrator](https://developer.android.com/reference/android/os/Vibrator.html)
+
+
+[BaseBundle](https://developer.android.com/reference/android/os/BaseBundle.html)
+
+[Parcelable & Serializable](http://www.cnblogs.com/renqingping/archive/2012/10/25/Parcelable.html)
