@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_484e61"
+        >
+        <TextView
+            android:id="@+id/tv_city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/tv_title_color"
+            android:textSize="@dimen/tv_title_size"
+            />
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/color_27a5f9"
+        >
+        <TextView
+            android:id="@+id/tv_publish_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/tv_title_color"
+            android:textSize="@dimen/tv_publish_info_size"
+            android:text="@string/tv_publish_info_text"
+            />
+        <LinearLayout
+            android:id="@+id/layout_weather_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/tv_weather_date"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="@color/tv_title_color"
+                android:textSize="@dimen/tv_weather_date_size"
+                android:text="@string/tv_weather_date_text"
+                />
+            <TextView
+                android:id="@+id/tv_weather_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textColor="@color/tv_title_color"
+                android:textSize="@dimen/tv_weather_info_size"
+                android:text="@string/tv_weather_desc"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/tv_tempr_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/tv_title_color"
+                    android:textSize="@dimen/tv_weather_date_size"
+                    android:text="@string/tv_weather_tempr_low"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/tv_title_color"
+                    android:textSize="@dimen/tv_weather_date_size"
+                    android:text="@string/tv_weather_signal"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_tempr_high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/tv_title_color"
+                    android:textSize="@dimen/tv_weather_date_size"
+                    android:text="@string/tv_weather_tempr_low"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

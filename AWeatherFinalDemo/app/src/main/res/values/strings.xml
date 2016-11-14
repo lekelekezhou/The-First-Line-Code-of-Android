@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">A Weather Final Demo</string>
+    <string name="tv_title_text">Title</string>
+    <string name="tv_publish_info_text">Publish Info</string>
+    <string name="tv_weather_date_text">Date</string>
+    <string name="tv_weather_tempr_low">Low tempr</string>
+    <string name="tv_weather_signal">~</string>
+    <string name="tv_weather_desc">Weather Desc</string>
+</resources>

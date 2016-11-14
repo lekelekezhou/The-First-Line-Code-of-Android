@@ -1,0 +1,9 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="tv_title_size">24sp</dimen>
+    <dimen name="tv_publish_info_size">18sp</dimen>
+    <dimen name="tv_weather_date_size">18sp</dimen>
+    <dimen name="tv_weather_info_size">40sp</dimen>
+</resources>
