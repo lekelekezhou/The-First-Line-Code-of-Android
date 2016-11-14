@@ -64,12 +64,18 @@ public class ChooseAreaActivity extends AppCompatActivity{
 
     private int currentLevel;                                       // 当前选中级别
 
+    private boolean isFromWeatherActivity;                          // 是否从天气页跳转
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        isFromWeatherActivity = getIntent().getBooleanExtra("from_weather_activity", false);
+        Log.d(TAG, "isFromWeatherActivity:" + isFromWeatherActivity);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        if (prefs.getBoolean("city_selected", false)) {
+        /**
+         * 再次启动应用时，若已经选择过城市，city_selected=true，且不是从天气页跳转，则直接跳转到天气页
+         */
+        if (prefs.getBoolean("city_selected", false) && !isFromWeatherActivity) {
             Intent intent = new Intent(this, WeatherActivity.class);
             startActivity(intent);
             finish();
@@ -111,7 +117,6 @@ public class ChooseAreaActivity extends AppCompatActivity{
             dataList.clear();
             for (County county: countyList) {
                 dataList.add(county.getCountyName());
-                Log.d(TAG, "county add to datalist" + county.getCountyName());
             }
             adapter.notifyDataSetChanged();
             listView.setSelection(0);
@@ -242,12 +247,16 @@ public class ChooseAreaActivity extends AppCompatActivity{
      */
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+//        super.onBackPressed();              // 此处需要删掉，否则返回行为未被override
         if (currentLevel == LEVEL_COUNTY) {
             queryCities();
         } else if (currentLevel == LEVEL_CITY) {
             queryProvinces();
         } else {
+            if (isFromWeatherActivity) {
+                Intent intent = new Intent(this, WeatherActivity.class);
+                startActivity(intent);
+            }
             finish();
         }
     }

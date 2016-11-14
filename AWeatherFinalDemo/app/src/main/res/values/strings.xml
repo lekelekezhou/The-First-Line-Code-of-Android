@@ -6,4 +6,5 @@
     <string name="tv_weather_tempr_low">Low tempr</string>
     <string name="tv_weather_signal">~</string>
     <string name="tv_weather_desc">Weather Desc</string>
+    <string name="tv_city">City</string>
 </resources>

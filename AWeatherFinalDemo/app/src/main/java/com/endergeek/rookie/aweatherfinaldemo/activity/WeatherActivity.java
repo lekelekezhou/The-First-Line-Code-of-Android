@@ -1,5 +1,6 @@
 package com.endergeek.rookie.aweatherfinaldemo.activity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -7,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -18,7 +20,7 @@ import com.endergeek.rookie.aweatherfinaldemo.util.NetworkUtility;
 /**
  * Created by wangsenhui on 11/14/16.
  */
-public class WeatherActivity extends AppCompatActivity{
+public class WeatherActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = WeatherActivity.class.getSimpleName();
 
@@ -36,6 +38,10 @@ public class WeatherActivity extends AppCompatActivity{
 
     private TextView tvCurrentDate;     // 当前日期
 
+    private Button btnSwitchCity;
+
+    private Button btnRefresh;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +54,11 @@ public class WeatherActivity extends AppCompatActivity{
         tvTemprLow = (TextView) findViewById(R.id.tv_tempr_low);
         tvTemprHigh = (TextView) findViewById(R.id.tv_tempr_high);
         tvCurrentDate = (TextView) findViewById(R.id.tv_weather_date);
+        btnSwitchCity = (Button) findViewById(R.id.btn_switch_city);
+        btnRefresh = (Button) findViewById(R.id.btn_refresh_weather);
+
+        btnSwitchCity.setOnClickListener(this);
+        btnRefresh.setOnClickListener(this);
 
         String countyCode = getIntent().getStringExtra("county_code");
 
@@ -60,6 +71,28 @@ public class WeatherActivity extends AppCompatActivity{
         } else {
             // 没有县级代码则显示本地天气
             showWeather();
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_switch_city:
+                Intent intent = new Intent(this, ChooseAreaActivity.class);
+                intent.putExtra("from_weather_activity", true);
+                startActivity(intent);
+                finish();
+                break;
+            case R.id.btn_refresh_weather:
+                tvPublishTime.setText("Sync...");
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+                String weatherCode = prefs.getString("weather_code", "");
+                if (!TextUtils.isEmpty(weatherCode)) {
+                    queryWeatherInfo(weatherCode);
+                }
+                break;
+            default:
+                break;
         }
     }
 
@@ -140,4 +173,5 @@ public class WeatherActivity extends AppCompatActivity{
         Log.d(TAG, "queryWeatherCode:" + countyCode);
         queryFromSvr(address, "countyCode");
     }
+
 }
