@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -22,6 +21,7 @@ import com.endergeek.rookie.aweatherfinaldemo.model.County;
 import com.endergeek.rookie.aweatherfinaldemo.model.Province;
 import com.endergeek.rookie.aweatherfinaldemo.util.HttpCallbackListener;
 import com.endergeek.rookie.aweatherfinaldemo.util.HttpUtil;
+import com.endergeek.rookie.aweatherfinaldemo.util.LogUtil;
 import com.endergeek.rookie.aweatherfinaldemo.util.NetworkUtility;
 
 import java.util.ArrayList;
@@ -70,7 +70,7 @@ public class ChooseAreaActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         isFromWeatherActivity = getIntent().getBooleanExtra("from_weather_activity", false);
-        Log.d(TAG, "isFromWeatherActivity:" + isFromWeatherActivity);
+        LogUtil.d(TAG, "isFromWeatherActivity:" + isFromWeatherActivity);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         /**
          * 再次启动应用时，若已经选择过城市，city_selected=true，且不是从天气页跳转，则直接跳转到天气页
@@ -118,7 +118,7 @@ public class ChooseAreaActivity extends AppCompatActivity{
             for (County county: countyList) {
                 dataList.add(county.getCountyName());
             }
-            Log.d(TAG, "dataList:" + dataList);
+            LogUtil.d(TAG, "dataList:" + dataList);
             adapter.notifyDataSetChanged();
             listView.setSelection(0);
             tvTitle.setText(selectedCity.getCityName());
@@ -184,13 +184,13 @@ public class ChooseAreaActivity extends AppCompatActivity{
                 boolean result = false;
                 if ("province".equals(type)) {
                     result = NetworkUtility.handleProvinceResponse(weatherDBProcess, response);
-                    Log.d(TAG, "province response" + response);
+                    LogUtil.d(TAG, "province response" + response);
                 } else if ("city".equals(type)) {
                     result = NetworkUtility.handleCityResponse(weatherDBProcess, response, selectedProvince.getId());
-                    Log.d(TAG, "city response" + response);
+                    LogUtil.d(TAG, "city response" + response);
                 } else if ("county".equals(type)) {
                     result = NetworkUtility.handleCountiesResponse(weatherDBProcess, response, selectedCity.getId());
-                    Log.d(TAG, "county response" + response);
+                    LogUtil.d(TAG, "county response" + response);
                 }
                 if (result) {
                     runOnUiThread(new Runnable() {  // 通过runOnUiThread在主线程中处理逻辑

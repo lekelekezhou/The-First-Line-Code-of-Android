@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -17,6 +16,7 @@ import com.endergeek.rookie.aweatherfinaldemo.R;
 import com.endergeek.rookie.aweatherfinaldemo.service.AutoUpdateService;
 import com.endergeek.rookie.aweatherfinaldemo.util.HttpCallbackListener;
 import com.endergeek.rookie.aweatherfinaldemo.util.HttpUtil;
+import com.endergeek.rookie.aweatherfinaldemo.util.LogUtil;
 import com.endergeek.rookie.aweatherfinaldemo.util.NetworkUtility;
 
 /**
@@ -126,7 +126,7 @@ public class WeatherActivity extends AppCompatActivity implements View.OnClickLi
                         if (array != null && array.length == 2) {
                             String weatherCode = array[1];
                             queryWeatherInfo(weatherCode);
-                            Log.d(TAG, "weatherCode" + weatherCode);
+                            LogUtil.d(TAG, "weatherCode" + weatherCode);
                         }
                     }
                     // 解析天气信息
@@ -166,7 +166,7 @@ public class WeatherActivity extends AppCompatActivity implements View.OnClickLi
      */
     private void queryWeatherInfo(String weatherCode) {
         String address = "http://www.weather.com.cn/data/cityinfo/" + weatherCode + ".html";
-        Log.d(TAG, "queryWeatherInfo:" + address);
+        LogUtil.d(TAG, "queryWeatherInfo:" + address);
         queryFromSvr(address, "weatherCode");
     }
 
@@ -176,7 +176,7 @@ public class WeatherActivity extends AppCompatActivity implements View.OnClickLi
      */
     private void queryWeatherCode(String countyCode) {
         String address = "http://www.weather.com.cn/data/list3/city" + countyCode + ".xml";
-        Log.d(TAG, "queryWeatherCode:" + countyCode);
+        LogUtil.d(TAG, "queryWeatherCode:" + countyCode);
         queryFromSvr(address, "countyCode");
     }
 

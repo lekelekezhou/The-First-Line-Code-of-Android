@@ -1,6 +1,5 @@
 package com.endergeek.rookie.aweatherfinaldemo.util;
 
-import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -32,7 +31,7 @@ public class HttpUtil {
                     StringBuilder response = new StringBuilder();
                     String line;
                     while ((line = bufferedReader.readLine()) != null) {
-                        Log.d(TAG, "address:" + address + " bufferedReader.readLine() "
+                        LogUtil.d(TAG, "address:" + address + " bufferedReader.readLine() "
                                 + bufferedReader.readLine() + " response:" + response + " line:" + line);
                         response.append(line);
                     }

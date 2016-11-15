@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.endergeek.rookie.aweatherfinaldemo.db.WeatherDBProcess;
 import com.endergeek.rookie.aweatherfinaldemo.model.City;
@@ -113,7 +112,7 @@ public class NetworkUtility {
      * @param response
      */
     public static void handleWeatherResponse(Context context, String response) {
-        Log.d(TAG, "response in handler" + response);
+        LogUtil.d(TAG, "response in handler" + response);
         try {
             JSONObject jsonObject = new JSONObject(response);
             JSONObject weatherInfo = jsonObject.getJSONObject("weatherinfo");
@@ -124,7 +123,7 @@ public class NetworkUtility {
             String weatherDesc = weatherInfo.getString("weather");
             String pTime = weatherInfo.getString("ptime");
             saveWeatherInfo(context, cityName, weatherCode, tempLow, tempHigh, weatherDesc, pTime);
-            Log.d(TAG, "weatherinfo" + weatherInfo + "cityName:" + cityName
+            LogUtil.d(TAG, "weatherinfo" + weatherInfo + "cityName:" + cityName
                     + " weatherCode:" + weatherCode + " temprLow:" + tempLow
                     + " temprHigh:" +tempHigh + " weatherDesc:" + weatherDesc
                     + " pTime:" + pTime);
@@ -144,7 +143,7 @@ public class NetworkUtility {
         editor.putString("weather_desc", weatherDesc);
         editor.putString("publish_time", pTime);
         editor.putString("current_date", sdf.format(new Date()));
-        Log.d(TAG, "city_name:" + cityName
+        LogUtil.d(TAG, "city_name:" + cityName
                 + " weather_code:" + weatherCode + " tempr_low:" + tempLow
                 + " tempr_high:" +tempHigh + " weather_desc:" + weatherDesc
                 + " publish_time:" + pTime + " current_date:" + sdf.format(new Date()));
