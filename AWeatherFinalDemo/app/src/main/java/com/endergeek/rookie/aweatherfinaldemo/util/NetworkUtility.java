@@ -113,6 +113,7 @@ public class NetworkUtility {
      * @param response
      */
     public static void handleWeatherResponse(Context context, String response) {
+        Log.d(TAG, "response in handler" + response);
         try {
             JSONObject jsonObject = new JSONObject(response);
             JSONObject weatherInfo = jsonObject.getJSONObject("weatherinfo");
@@ -123,6 +124,10 @@ public class NetworkUtility {
             String weatherDesc = weatherInfo.getString("weather");
             String pTime = weatherInfo.getString("ptime");
             saveWeatherInfo(context, cityName, weatherCode, tempLow, tempHigh, weatherDesc, pTime);
+            Log.d(TAG, "weatherinfo" + weatherInfo + "cityName:" + cityName
+                    + " weatherCode:" + weatherCode + " temprLow:" + tempLow
+                    + " temprHigh:" +tempHigh + " weatherDesc:" + weatherDesc
+                    + " pTime:" + pTime);
         } catch (JSONException e) {
             e.printStackTrace();
         }

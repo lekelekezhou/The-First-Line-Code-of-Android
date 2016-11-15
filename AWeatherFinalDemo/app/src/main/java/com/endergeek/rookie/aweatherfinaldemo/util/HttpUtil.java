@@ -32,8 +32,9 @@ public class HttpUtil {
                     StringBuilder response = new StringBuilder();
                     String line;
                     while ((line = bufferedReader.readLine()) != null) {
+                        Log.d(TAG, "address:" + address + " bufferedReader.readLine() "
+                                + bufferedReader.readLine() + " response:" + response + " line:" + line);
                         response.append(line);
-                        Log.d(TAG, "response:" + response);
                     }
                     if (listener != null) {
                         listener.onFinish(response.toString());

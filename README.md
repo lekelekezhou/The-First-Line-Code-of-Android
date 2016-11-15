@@ -198,3 +198,9 @@ RotateAnimation
 [BaseBundle](https://developer.android.com/reference/android/os/BaseBundle.html)
 
 [Parcelable & Serializable](http://www.cnblogs.com/renqingping/archive/2012/10/25/Parcelable.html)
+
+[android:label](https://developer.android.com/guide/topics/manifest/activity-element.html#label)
+
+[java.lang.NullPointerException: println needs a message](http://stackoverflow.com/questions/11449589/java-lang-nullpointerexception-println-needs-a-message)
+
+Attempt to invoke virtual method 'java.lang.String java.lang.Object.toString()' on a null object reference List``<String>``中元素为null
