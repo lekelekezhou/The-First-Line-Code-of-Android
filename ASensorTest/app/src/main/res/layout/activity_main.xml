@@ -30,4 +30,13 @@
         android:layout_height="256dp"
         android:src="@drawable/compass"
         />
+
+    <TextView
+        android:id="@+id/tv_gps_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/tv_light_text_size"
+        android:text="@string/tv_gps_info_text"
+        />
 </LinearLayout>

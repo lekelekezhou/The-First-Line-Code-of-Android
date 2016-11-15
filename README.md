@@ -204,3 +204,5 @@ RotateAnimation
 [java.lang.NullPointerException: println needs a message](http://stackoverflow.com/questions/11449589/java-lang-nullpointerexception-println-needs-a-message)
 
 Attempt to invoke virtual method 'java.lang.String java.lang.Object.toString()' on a null object reference List``<String>``中元素为null
+
+[打包签名](http://blog.csdn.net/linghu_java/article/details/6701666)未签名会安装包解析失败
