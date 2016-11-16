@@ -206,3 +206,5 @@ RotateAnimation
 Attempt to invoke virtual method 'java.lang.String java.lang.Object.toString()' on a null object reference List``<String>``中元素为null
 
 [打包签名](http://blog.csdn.net/linghu_java/article/details/6701666)未签名会安装包解析失败
+
+[Manifest.xml合并](https://developer.android.com/studio/build/manifest-merge.html)
