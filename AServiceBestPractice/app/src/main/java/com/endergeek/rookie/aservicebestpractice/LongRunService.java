@@ -15,6 +15,7 @@ import java.util.Date;
  * Created by wangsenhui on 11/8/16.
  */
 public class LongRunService extends Service{
+
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {

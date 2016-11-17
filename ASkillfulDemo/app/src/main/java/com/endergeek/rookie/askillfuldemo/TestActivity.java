@@ -14,11 +14,11 @@ public class TestActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
-        PersonSerializable personS = (PersonSerializable) getIntent().getSerializableExtra("person_data");
+        PersonSerializable personS = (PersonSerializable) getIntent().getSerializableExtra("person_data"); // 向下转型成PersonSerializable对象
         if (personS != null) {
             Toast.makeText(getApplicationContext(), "Age:" + personS.getAge() + "Name" + personS.getName(), Toast.LENGTH_SHORT).show();
         }
-        PersonParcelable personP = (PersonParcelable) getIntent().getParcelableExtra("person_data");
+        PersonParcelable personP = getIntent().getParcelableExtra("person_data");
         if (personP != null) {
             Toast.makeText(getApplicationContext(), "Age:" + personP.getAge() + "Name" + personP.getName(), Toast.LENGTH_SHORT).show();
         }

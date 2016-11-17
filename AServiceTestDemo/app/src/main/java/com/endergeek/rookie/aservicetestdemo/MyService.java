@@ -40,7 +40,7 @@ public class MyService extends Service{
 
         /**
          * 提供前台通知，此处与 Notification Demo创建通知有所区别
-         * startForeground 属于Service，需要调用Service才可使用
+         * startForeground 属于Service，需要通过调用Service才可使用
          */
         Intent notificationIntent = new Intent(this, MainActivity.class);
         PendingIntent pi = PendingIntent.getActivity(this, 0, notificationIntent, 0);
