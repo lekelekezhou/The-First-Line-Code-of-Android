@@ -140,7 +140,7 @@ cursor.close, sqliteDatabase.beginTransaction, sqliteDatabase.setTransactionSucc
  - [BroadcastReceiver.getResultCode()](https://developer.android.com/reference/android/content/BroadcastReceiver.html) 
  - ``Error``:java.lang.NullPointerException: Attempt to get length of null array sendTextMessage 时，要检查每个值存在不为null
 
-###### [A Choose Pic Test]
+###### [A Choose Pic Test](https://github.com/sennhviwang/The-First-Line-of-Android-Code/tree/master/AChoosePicTest)
  - 选择照片实例，也是解析外存文件路径的实例，功能包含拍照、裁剪、从图片库中选择，并显示结果在ImageView中，需要获取写外存权限，已打必要log。由于照片裁剪可能导致内存泄露，因此建议根据需求先对照片压缩再加载，更复杂例子参见： ``A content sharing demo``
  - ``Key Words``: File, Environment.getExternalStorageDirectory, exists, delete, createNewFile, startActivityForResult, onActivityResult, intent.setDataAndType, Bitmap, BitmapFactory.decodeStream, getContentResolver().openInputStream(uri), cursor.moveToFirst, MediaStore.Images.Media.DATA, (cursor != null && !cursor.isClosed), intent.getData, DocumentsContract.isDocumentUri, DocumentsContract.getDocumentId(uri),
  - [BitmapFactory](https://developer.android.com/reference/android/graphics/BitmapFactory.html)
