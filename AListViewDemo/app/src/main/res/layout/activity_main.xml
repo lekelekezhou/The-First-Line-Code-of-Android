@@ -5,10 +5,35 @@
     android:layout_height="match_parent"
     tools:context="com.endergeek.rookie.alistviewdemo.MainActivity">
 
+
     <ListView
         android:id="@+id/activity_list_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/activity_ly"
+        >
     </ListView>
+
+    <LinearLayout
+        android:id="@+id/activity_ly"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/et_edit_area"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="@string/et_edit_hint"
+            />
+
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_name_text"
+            />
+
+    </LinearLayout>
 
 </RelativeLayout>

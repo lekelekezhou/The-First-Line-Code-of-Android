@@ -6,13 +6,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements View.OnClickListener {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -21,10 +24,27 @@ public class MainActivity extends Activity {
 
     private List<Fruit> fruitList = new ArrayList<Fruit>();
 
+    private EditText etInput;
+
+    ListView listView;
+
+    FruitAdapter adapter;
+
+    Fruit tmp_fruit;
+
+    private Button btnAdd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        listView = (ListView) findViewById(R.id.activity_list_view);
+
+        etInput = (EditText) findViewById(R.id.et_edit_area);
+        btnAdd = (Button) findViewById(R.id.btn_edit);
+        btnAdd.setOnClickListener(this);
+
 
         /**
          * 获取屏幕的密度值
@@ -42,8 +62,7 @@ public class MainActivity extends Activity {
          * 调用ListView的setAdapter方法，传入适配器对象
          */
         initFruits();
-        FruitAdapter adapter = new FruitAdapter(MainActivity.this, R.layout.item_list_fruit, fruitList);
-        ListView listView = (ListView) findViewById(R.id.activity_list_view);
+        adapter = new FruitAdapter(MainActivity.this, R.layout.item_list_fruit, fruitList);
         listView.setAdapter(adapter);
         // 定制ListView用法 End
 
@@ -70,10 +89,23 @@ public class MainActivity extends Activity {
         });
     }
 
-    private void initFruits() {
-        for (int i = 0; i < 1000; i++) {
-            Fruit fruit = new Fruit("Click" + i, R.drawable.ic_mood_bad_black_18dp);
-            fruitList.add(fruit);
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_edit:
+                tmp_fruit = new Fruit(etInput.getText().toString(), R.drawable.ic_mood_bad_black_18dp);
+                fruitList.add(tmp_fruit);
+                Log.d("Main", "tmp_fruit:" + tmp_fruit + " fruitList:" + fruitList);
+                adapter.notifyDataSetChanged();
+                break;
+            default:
+                break;
         }
     }
+
+    private void initFruits() {
+            Fruit fruit = new Fruit("First", R.drawable.ic_mood_bad_black_18dp);
+            fruitList.add(fruit);
+    }
+
 }
