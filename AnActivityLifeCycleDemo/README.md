@@ -16,21 +16,21 @@ Use activities to demonstrate lifecyle in android
 ---
 
 #### **Normal Activity & Dialog Activity**
-![Normal&DialogLifeCycleCapture](https://github.com/sennhviwang/Android-Learn-Journey/blob/master/AnActivityLifeCycleDemo/Normal%26DialogLifeCycleCapture.png)
+![Normal&DialogLifeCycleCapture](https://github.com/sennhviwang/The-First-Line-Code-of-Android/blob/master/AnActivityLifeCycleDemo/Normal%26DialogLifeCycleCapture.png)
 
 #### **standard Mode**
-![standardModeCapture](https://github.com/sennhviwang/Android-Learn-Journey/blob/master/AnActivityLifeCycleDemo/standardModeCapture.png)
+![standardModeCapture](https://github.com/sennhviwang/The-First-Line-Code-of-Android/blob/master/AnActivityLifeCycleDemo/standardModeCapture.png)
 
 #### **singleTop Mode**
 ![singleTopModeCapture](
-https://github.com/sennhviwang/Android-Learn-Journey/blob/master/AnActivityLifeCycleDemo/singleTopModeCapture.png)
+https://github.com/sennhviwang/The-First-Line-Code-of-Android/blob/master/AnActivityLifeCycleDemo/singleTopModeCapture.png)
 
 #### **singleTask Mode**
 ![singleTaskModeCapture](
-https://github.com/sennhviwang/Android-Learn-Journey/blob/master/AnActivityLifeCycleDemo/singleTaskModeCapture.png)
+https://github.com/sennhviwang/The-First-Line-Code-of-Android/blob/master/AnActivityLifeCycleDemo/singleTaskModeCapture.png)
 
 #### **singleInstance Mode**
-![singleInstanceModeCapture](https://github.com/sennhviwang/Android-Learn-Journey/blob/master/AnActivityLifeCycleDemo/singleInstanceModeCapture.png)
+![singleInstanceModeCapture](https://github.com/sennhviwang/The-First-Line-Code-of-Android/blob/master/AnActivityLifeCycleDemo/singleInstanceModeCapture.png)
 
 
 

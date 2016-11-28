@@ -89,6 +89,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         });
     }
 
+    /**
+     * 增加 动态添加列表项的功能
+     * @param v
+     */
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
